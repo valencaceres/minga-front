@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { Link as Anchor } from "react-router-dom";
+import './header.css'
+
+
+
 export default function Header() {
   const [variable, setVariable] = useState(false);
   const handleMenu = () =>{
@@ -7,8 +11,10 @@ export default function Header() {
   }
 
   return (
-    <div>
+    <div >
       <header>
+
+
         <button onClick={handleMenu} className="menuButton">Menu</button>
         {
           variable
@@ -22,11 +28,12 @@ export default function Header() {
               </div>
           </nav>
           )
-          :          
+          :
         <nav className="none">
           <a href="#">Home</a>
           <a href="#">Comics</a>
           <a href="#">Comic Details</a>
+          <a href="#">New Comic</a>
         </nav>
         }
 

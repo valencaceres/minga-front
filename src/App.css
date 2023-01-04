@@ -45,28 +45,7 @@ nav a {
 nav > a:hover{
   color: rgb(180, 180, 180)
 }
-.menuButton{
-  margin-top: 2%;
-  background-color: #4338ca;
-  height: 8%;
-  width: 10%;
-  border: 0;
-  border-radius: 8px 8px 8px;
-  font-size: 18px;
-}
-.menuButton:hover{
-  background-color: #302794;
-}
-.login-button {
-  border: 1px solid #fff;
-  padding: 0.6rem 0.8rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-  font-size: small;
-}
+
 span {
   color: #fff;
   font-size: small;
