@@ -18,7 +18,7 @@ export default function Header() {
               <div className="navItems">
               <Anchor to={"/"}>Home</Anchor>
               <Anchor to={"/comics"}>Comics</Anchor>
-              <Anchor to={"/form"}>Form</Anchor>
+              <Anchor to={"/chapters"}>Chapters</Anchor>
               </div>
           </nav>
           )

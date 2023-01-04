@@ -1,0 +1,12 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+input{
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(128, 128, 128, 0.007);
+}
