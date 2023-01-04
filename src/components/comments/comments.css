@@ -1,5 +1,5 @@
 .formComments{
-    background-color: aquamarine;
+    background-color: rgba(188, 237, 220, 0.476);
     color: black;
 }
 
@@ -50,29 +50,33 @@ h3{
 }
 
 .imgconversacion{
-    height: 50px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .commentfooter{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100px;
 }
 
 .commentimgcom{
     display: flex;
-    gap: 15px;
+    gap: 5px;
     margin: 0 15px;
+    align-items: center;
 }
 
 .butonComment{
     border-radius: 10px;
-    height: 70px;
-    width: 60px;
+    height: 50px;
+    width: 80px;
     background-color: white;
     color: rgb(83, 175, 240)
 }
 
 .pdate{
-    color: antiquewhite;
+    color: rgb(43, 25, 2);
     font-size: 10px;
 }

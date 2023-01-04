@@ -39,21 +39,23 @@ export default class Comments extends React.Component {
           {this.state.comments.map((comment, index) => (
             <>
             <div className="commentary">
-            <div className="divComments">
+              <div className="divComments">
                 <img className="photoComment" src="https://conceptodefinicion.de/wp-content/uploads/2016/01/Perfil2.jpg" alt=""/>
                 <h3>Ignacio Borraz</h3>
-            </div>
+              </div>
             <p className="pComment" key={index}>{comment}</p>
-            <div className="commentfooter">
+                <div className="commentfooter">
             <div  className="commentimgcom">
-            <img className="imgconversacion" src="../../../public/assets/conversacion.png" alt="aa" />
+            <img className="imgconversacion" src="/assets/comment.png" alt="aa" />
             <p>12</p>
+            
+            </div>
+            <div>
             <button className="butonComment">Reply</button>
             </div>
             <p className="pdate">12 min ago</p>
             <div>
             </div>
-
             </div>
             </div>
             </>
