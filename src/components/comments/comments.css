@@ -1,0 +1,78 @@
+.formComments{
+    background-color: aquamarine;
+    color: black;
+}
+
+.labelComments{
+color: black;
+}
+
+.textareaComments{
+color: black;
+}
+
+.inputComments{
+color: black;
+}
+
+.divComments{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    
+    
+
+}
+
+.photoComment{
+    height: 75px;
+    width:75px;
+    object-fit:fill;
+    border-radius: 50%;
+    border:1px black solid;
+    margin: 10px;
+}
+
+.pComment{
+    color: black;
+    margin: 20px;}
+
+h3{
+    color: black;
+}
+
+.commentary{
+    border: 1 solid black;
+    background-color: rgba(117, 229, 249, 0.446);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.8);
+}
+
+.imgconversacion{
+    height: 50px;
+}
+
+.commentfooter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentimgcom{
+    display: flex;
+    gap: 15px;
+    margin: 0 15px;
+}
+
+.butonComment{
+    border-radius: 10px;
+    height: 70px;
+    width: 60px;
+    background-color: white;
+    color: rgb(83, 175, 240)
+}
+
+.pdate{
+    color: antiquewhite;
+    font-size: 10px;
+}
