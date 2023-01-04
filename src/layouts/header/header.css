@@ -1,16 +1,4 @@
-.menuButton{
-    z-index: 11;
-    margin-top: 2%;
-    background-color: #4338ca;
-    height: 8%;
-    width: 10%;
-    border: 0;
-    border-radius: 8px 8px 8px;
-    font-size: 18px;
-  }
-  .menuButton:hover{
-    background-color: #302794;
-  }
+
   .login-button {
     border: 1px solid #fff;
     padding: 0.6rem 0.8rem;

@@ -1,41 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link as Anchor } from "react-router-dom";
 import './header.css'
 
 
 
 export default function Header() {
-  const [variable, setVariable] = useState(false);
-  const handleMenu = () =>{
-    setVariable(!variable)
-  }
+
 
   return (
     <div >
       <header>
 
 
-        <button onClick={handleMenu} className="menuButton">Menu</button>
-        {
-          variable
-          ?
-          (
-            <nav className="activo">
-              <div className="navItems">
-              <Anchor to={"/"}>Home</Anchor>
-              <Anchor to={"/comics"}>Comics</Anchor>
-              <Anchor to={"/form"}>Form</Anchor>
-              </div>
-          </nav>
-          )
-          :
-        <nav className="none">
-          <a href="#">Home</a>
-          <a href="#">Comics</a>
-          <a href="#">Comic Details</a>
-          <a href="#">New Comic</a>
-        </nav>
-        }
+        
 
         <div className="section">
           <span>

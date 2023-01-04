@@ -13,6 +13,30 @@ nav {
     justify-content: space-around;
     width: 100vw;
 }
+.menuButton{
+    z-index: 11;
+    margin-top: 1%;
+    background-color: #4338ca;
+    height: 30%;
+    width: 10%;
+    border: 0;
+    border-radius: 8px 8px 8px;
+    font-size: 18px;
+  }
+  .menuButton:hover{
+    background-color: #302794;
+  }
+.navItems {
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute;
+  }
 
 .buton{
     height: 50px;
@@ -20,5 +44,8 @@ nav {
 
 
 .login-button{
-    height: 50px;
+    margin-top: 1%;
+    height: 30%;
+    display: flex;
+    align-items: center;
 }
