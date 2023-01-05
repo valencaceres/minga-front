@@ -63,7 +63,7 @@ const AddNewComic = () => {
     return (
         <form onSubmit={storeData}>
             <label htmlFor="author_id">
-                Author id
+                Author id's
                 <input 
 
                     type="id"
