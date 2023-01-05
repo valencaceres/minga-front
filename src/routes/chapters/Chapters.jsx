@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, {useState, useRef}  from 'react'
+import React, {useRef}  from 'react'
 import './chapters.css'
 
 export default function Chapters() {

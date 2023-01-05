@@ -30,5 +30,8 @@ input{
     background-color: rgb(116, 116, 116);
     width: 10vw;
     height: 5vh;
-    border-radius: 10px;
+    border-radius: 50px;
+}
+.submit:hover{
+    background-color: rgb(83, 82, 82);
 }
