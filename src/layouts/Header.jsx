@@ -19,6 +19,7 @@ export default function Header() {
               <Anchor to={"/"}>Home</Anchor>
               <Anchor to={"/comics"}>Comics</Anchor>
               <Anchor to={"/form"}>Form</Anchor>
+              <Anchor to={"/new-comic"}>New Comic</Anchor>
               </div>
           </nav>
           )
@@ -27,6 +28,7 @@ export default function Header() {
           <a href="#">Home</a>
           <a href="#">Comics</a>
           <a href="#">Comic Details</a>
+          <a href="#">New Comic</a>
         </nav>
         }
 
