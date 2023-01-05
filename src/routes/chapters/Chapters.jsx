@@ -10,9 +10,9 @@ export default function Chapters() {
   const saveData = (e)  => {
     e.preventDefault()
       let datos = {
-        comic_id: "63b4473915f0c3b2d08b715e",
+        comic_id: "63b6e9aa19323890c4bd6bb2",
         title: inputTitle.current.value,
-        pages: inputPage.current.value.split(','),
+        pages: inputPage.current.value.split(',').map(element => element.trim()),
         order: inputOrder.current.value
       }
       axios.post("http://localhost:8000/api/chapters", datos)
