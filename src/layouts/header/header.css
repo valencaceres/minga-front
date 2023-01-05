@@ -1,0 +1,11 @@
+
+  .login-button {
+    border: 1px solid #fff;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-size: small;
+  }
