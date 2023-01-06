@@ -2,8 +2,12 @@
 import React, { useRef } from "react";
 import "./addnewcomic.css";
 import axios from "axios";
+import  alertActions from '../../store/alert/actions.js'
+import { useDispatch } from 'react-redux'
 
 const AddNewComic = () => {
+    const {mingaAlert} = alertActions
+    const dispatch = useDispatch()
     const inputAuthorId = useRef("");
     const inputCompanyId = useRef("");
     const inputTitle = useRef("");
@@ -25,7 +29,17 @@ const AddNewComic = () => {
         axios
             .post("http://localhost:8000/api/comics", data)
             .then((e) => console.log(e))
-            .catch((error) => console.log(error));
+            .catch(error => {
+
+               
+        
+                dispatch(mingaAlert(error.response.data.response))
+                dispatch(mingaAlert("Done"))
+               console.log(error.response.data.response) 
+                
+              })
+
+
     };
 
     return (
