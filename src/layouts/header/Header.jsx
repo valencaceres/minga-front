@@ -1,4 +1,5 @@
 import React from "react";
+
 import './header.css'
 
 
@@ -9,10 +10,6 @@ export default function Header() {
   return (
     <div >
       <header>
-
-
-        
-
         <div className="section">
           <span>
             Anunciamos nuestra próxima ronda de financiación. <a>Leer más →</a>

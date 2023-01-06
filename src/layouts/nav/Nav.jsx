@@ -11,7 +11,7 @@ export default function Nav() {
   }
 
   return (
-    <nav >
+    <nav className='nav-container'>
      
     <Anchor to={"/"}><img className='imgLogo' src="/assets/logo1.png" alt="" /></Anchor>
 
@@ -23,18 +23,16 @@ export default function Nav() {
             <nav className="activo">
               <div className="navItems">
               <Anchor to={"/"}>Home</Anchor>
-              <Anchor to={"/comics"}>Comics</Anchor>
-              <Anchor to={"/chapters"}>Chapters</Anchor>
-              <Anchor to={"/form"}>Form</Anchor>
+              <Anchor to={"/my-comics"}>My comics</Anchor>
+              <Anchor to={"#"}>Logout</Anchor>
               </div>
           </nav>
           )
           :
         <div className="none">
           <a href="#">Home</a>
-          <a href="#">Comics</a>
-          <a href="#">Comic Details</a>
-          <a href="#">New Comic</a>
+          <a href="#">My comics</a>
+          <a href="#">Logout</a>
         </div>
         }
 
