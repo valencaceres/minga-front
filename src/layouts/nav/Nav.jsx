@@ -36,7 +36,7 @@ export default function Nav() {
         </div>
         }
 
-    <a className="login-button" href="#">Iniciar Sesión</a>   
+    <a className="login-button" href="#">Sing in</a>   
  
 
   </nav>
