@@ -6,11 +6,11 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 
 function App() {
-  return (
-      <RouterProvider router={indexRouter}/>
-            <Provider store={store}>
-              <RouterProvider router={indexRouter}/>
-            </Provider>
+  return (     
+
+      <Provider store={store}>
+          <RouterProvider router={indexRouter}/>
+      </Provider>
   );
 }
 

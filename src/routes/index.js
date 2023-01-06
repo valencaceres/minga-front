@@ -13,7 +13,7 @@ export const indexRouter = createBrowserRouter([
           element: <Carousel />
         },
         {
-          path: "/",
+          path: "/comments",
           element: <Comments />
         }
 

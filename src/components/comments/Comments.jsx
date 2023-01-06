@@ -1,14 +1,21 @@
-import React,{useRef} from "react";
+import React,{useState, useRef} from "react";
 import './comments.css'
 import axios from "axios";
 
-/* const Listcomments = () => {
-  const inputComment = useRef("")
-    return (
-      inputComment
-    )
-  }
- */
+
+
+
+
+
+
+
+
+
+
+
+ /*   *//* 
+
+
 export default class Comments extends React.Component {
     constructor(props) {
     super(props);
@@ -30,18 +37,7 @@ export default class Comments extends React.Component {
       comments: [...this.state.comments, this.state.comment],
       comment: ''
     });
-    let data = {
-      "chapter_id": "63ac47d8b4db2f7baacad498",
-      "user_id": "63ac47d8b4db2f7baacad498",
-      "text":"" //Listcomments
-  }
-    axios.post(
-      "http://localhost:8000/api/comments",//url del back
-      data //objeto que required el back     
-      )
-      .catch(err => {
-        console.log(err)
-      })
+    
   }
 
   render() {
@@ -50,25 +46,14 @@ export default class Comments extends React.Component {
         <div>
           {this.state.comments.map((comment, index) => (
             <>
-            <div className="commentary">
-              <div className="divComments">
-                <img className="photoComment" src="https://conceptodefinicion.de/wp-content/uploads/2016/01/Perfil2.jpg" alt=""/>
-                <h3>Ignacio Borraz</h3>
-              </div>
-              <div className="commentContain">
-            <p className="pComment" key={index}>{comment}</p>
-              </div>
-                <div className="commentfooter">
-            <div  className="commentimgcom">
-            <img className="imgconversacion" src="/assets/comment.png" alt="aa" />
-            <p className="numComments">12</p>
-            
-            </div>
+            <div >
+             
+                <div >
+           
             <div className="a">
-            <button className="butonComment">Reply
-            </button>
+           
             </div>
-            <p className="pdate">12 min ago</p>
+            
             <div>
             </div>
             </div>
@@ -79,10 +64,9 @@ export default class Comments extends React.Component {
         
         <form onSubmit={this.handleSubmit}>
           <label>            
-            <input type="text" /* ref={Listcomments}  */className="textareaComments"  minLength={1}
-        maxLength={200} placeholder="Say something here..." value={this.state.comment} onChange={this.handleChange} />
+            <input type="text" // ref={Listcomments}      value={this.state.comment} onChange={this.handleChange} />
           </label>
-          <input className="inputComments" type="submit" value="Enviar" />
+          <input  type="submit" value="Enviar" />
         </form>
       </div>
     );
@@ -90,4 +74,70 @@ export default class Comments extends React.Component {
 }
 
 
-  
+   */
+
+
+export default function Comments() {
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState('');
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setComments([...comments, newComment]);
+    setNewComment('');
+  }
+  const inputComment = useRef("")
+  let data = {
+    "chapter_id": "63ac47d8b4db2f7baacad498",
+    "user_id": "63ac47d8b4db2f7baacad498",
+    "text": inputComment
+}
+  axios.post(
+    "http://localhost:8000/api/comments",//url del back
+    data //objeto que required el back     
+    )
+    .catch(err => {
+      console.log(err)
+    })
+  return (
+    <div>
+      
+        {comments.map(comment => (
+          <div className="commentary" >
+             <div className="divComments">
+                <img className="photoComment" src="https://conceptodefinicion.de/wp-content/uploads/2016/01/Perfil2.jpg" alt=""/>
+                <h3>Ignacio Borraz</h3>
+              </div>
+
+          <p className="pComment" key={comment}>{comment}</p>
+          <div className="commentfooter">
+            <div  className="commentimgcom">
+            <img className="imgconversacion" src="/assets/comment.png" alt="aa" />
+            <p className="numComments">12</p> 
+            <button className="butonComment">Reply &nbsp;&nbsp;&nbsp;&nbsp;             
+            </button> 
+            <img className="lapiz" src="/assets/lapiz.png" alt="Texto alternativo"/>          
+            </div>
+            
+            <p className="pdate">12 min ago</p>
+          </div>
+          </div>
+        ))}
+
+      <form onSubmit={handleSubmit}>
+        <input className="textareaComments"
+        placeholder="Say something here..."
+        minLength={2}
+        maxLength={200}
+          type="text"
+          ref={inputComment}
+          value={newComment}
+      
+          onChange={event => setNewComment(event.target.value)}
+        />
+        <button className="inputComments" type="submit"></button>
+        <img  className="send" src="/assets/enviar.png" alt="" />
+      </form>
+    </div>
+  );
+}
