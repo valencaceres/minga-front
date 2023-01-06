@@ -26,6 +26,7 @@ export default function Chapters() {
         /* DESPACHA LA ALERTA */
 
         dispatch(mingaAlert(error.response.data.response))
+        dispatch(mingaAlert("Done"))
 /*         console.log(error.response.data.response) */
         //utilizo el hook useDispatch para despachar los errores hacia la accion
       })
