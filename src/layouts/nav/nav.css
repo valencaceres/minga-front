@@ -27,12 +27,13 @@ nav {
     background-color: #302794;
   }
 .navItems {
-    background-color: #4438caab;
+  height: 20vh;
+    background-color: #4438caaf;
     display: flex;
     width: 13%;
     flex-direction: column;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding: 1rem;
     align-items: center;
     border-radius: 15px;

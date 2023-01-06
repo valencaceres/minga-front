@@ -28,14 +28,14 @@ const AddNewComic = () => {
         };
         axios
             .post("http://localhost:8000/api/comics", data)
-            .then((e) => console.log(e))
+            .then((e) => dispatch(mingaAlert("Done")))
             .catch(error => {
 
                
         
-                dispatch(mingaAlert(error.response.data.response))
-                dispatch(mingaAlert("Done"))
-               console.log(error.response.data.response) 
+            dispatch(mingaAlert(error.response.data.response))
+            // dispatch(mingaAlert("Done"))
+            console.log(error.response.data.response) 
                 
               })
 
@@ -108,7 +108,7 @@ const AddNewComic = () => {
                         ref={inputCategory}
                     />
                 </label>
-                <input className="submit" type="submit" />
+                <input className="submit" type="submit"value="Add new comic" />
             </form>
         </div>
     );
