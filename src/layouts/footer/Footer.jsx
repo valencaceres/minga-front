@@ -17,7 +17,7 @@ export default function Footer() {
       </div>
       <div className='footer2'>
       <div className='info'>
-        <a >About Us</a>
+        <a >About us</a>
         <a>Comics</a>
         <a>Mangas</a>
       </div>
