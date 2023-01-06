@@ -24,7 +24,7 @@ export default function Nav() {
               <div className="navItems">
               <Anchor to={"/"}>Home</Anchor>
               <Anchor to={"/my-comics"}>My comics</Anchor>
-              <Anchor to={"#"}>Logout</Anchor>
+              <Anchor to={"#"}>logout</Anchor>
               </div>
           </nav>
           )
@@ -36,7 +36,7 @@ export default function Nav() {
         </div>
         }
 
-    <a className="login-button" href="#">Iniciar Sesión</a>   
+    <a className="login-button" href="#">Sing in</a>   
  
 
   </nav>
