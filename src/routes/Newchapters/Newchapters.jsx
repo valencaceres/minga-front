@@ -1,8 +1,12 @@
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import  alertActions from '../../store/alert/actions.js'
 import React, {useRef}  from 'react'
 import './chapters.css'
 
 export default function Chapters() {
+  const {mingaAlert} = alertActions
+  const dispatch = useDispatch()
   const inputTitle = useRef('')
   const inputPage = useRef('')
   const inputOrder = useRef('')
@@ -17,7 +21,15 @@ export default function Chapters() {
       }
       axios.post("http://localhost:8000/api/chapters", datos)
       .then(e=>console.log(e))
-      .catch(error => console.log(error))
+      .catch(error => {
+
+        /* DESPACHA LA ALERTA */
+
+        dispatch(mingaAlert(error.response.data.response))
+        dispatch(mingaAlert("Done"))
+/*         console.log(error.response.data.response) */
+        //utilizo el hook useDispatch para despachar los errores hacia la accion
+      })
   }
   return (
     <div className='chapters'>
