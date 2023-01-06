@@ -3,6 +3,7 @@ import Carousel from '../components/carousel.jsx'
 import Layout from "../layouts/Layout";
 import Chapters from "./Newchapters/Newchapters.jsx";
 
+
 export const indexRouter = createBrowserRouter([
     {
       path: "/",
@@ -11,10 +12,7 @@ export const indexRouter = createBrowserRouter([
         {
           path: "/",
           element: <Carousel />
-        },{
-          path: "/chapters",
-          element: <Chapters/>
-        }
+        },
       ]
     },
   
