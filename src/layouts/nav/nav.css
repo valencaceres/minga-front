@@ -18,7 +18,7 @@ nav {
     margin-top: 1%;
     background-color: #4338ca;
     height: 30%;
-    width: 10%;
+    width: 13%;
     border: 0;
     border-radius: 8px 8px 8px;
     font-size: 18px;
@@ -27,8 +27,9 @@ nav {
     background-color: #302794;
   }
 .navItems {
+    background-color: #4438caab;
     display: flex;
-    width: 10%;
+    width: 13%;
     flex-direction: column;
     justify-content: center;
     margin-top: 3rem;
@@ -49,3 +50,4 @@ nav {
     display: flex;
     align-items: center;
 }
+
