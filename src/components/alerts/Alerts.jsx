@@ -21,7 +21,7 @@ export default function Alerts() {
         })
     } */
     if(view){
-      toast(messages.map(message => message.message).join(<br/>),
+      toast(typeof messages === "string"? messages : messages = messages?.map(message => message.message).join("<br>"),
       {
         position: "top-right",
         autoClose: 5000,
@@ -30,7 +30,7 @@ export default function Alerts() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
         })
     }
 
@@ -39,16 +39,8 @@ export default function Alerts() {
     <div>
 {/*         {typeof messages === "string"? messages : messages = messages?.map(message => message.message).join("<br>")}
         {view && messages} */}
-        <ToastContainer position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"/>
+        <ToastContainer/>
+
     </div>
 
   )
