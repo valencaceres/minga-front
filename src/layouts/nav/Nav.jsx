@@ -11,9 +11,9 @@ export default function Nav() {
   }
 
   return (
-    <nav >
+    <nav className='nav-container'>
      
-    <a href="#"><img className='imgLogo' src="/assets/logo1.png" alt="" /></a>
+    <Anchor to={"/"}><img className='imgLogo' src="/assets/logo1.png" alt="" /></Anchor>
 
     <button onClick={handleMenu} className="menuButton">Menu</button>
         {
@@ -23,18 +23,17 @@ export default function Nav() {
             <nav className="activo">
               <div className="navItems">
               <Anchor to={"/"}>Home</Anchor>
-              <Anchor to={"/comics"}>Comics</Anchor>
-              <Anchor to={"/form"}>Form</Anchor>
+              <Anchor to={"/my-comics"}>My comics</Anchor>
+              <Anchor to={"#"}>Logout</Anchor>
               </div>
           </nav>
           )
           :
-        <nav className="none">
+        <div className="none">
           <a href="#">Home</a>
-          <a href="#">Comics</a>
-          <a href="#">Comic Details</a>
-          <a href="#">New Comic</a>
-        </nav>
+          <a href="#">My comics</a>
+          <a href="#">Logout</a>
+        </div>
         }
 
     <a className="login-button" href="#">Iniciar Sesión</a>   
