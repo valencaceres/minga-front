@@ -9,10 +9,24 @@ color: black;
 
 .textareaComments{
 color: black;
+height: 40px;
+width: 500px;
+border-radius: 15px;
+border: 1px solid gray;
 }
 
 .inputComments{
 color: black;
+position: relative;
+right: 50px;
+top: 5px;
+border-radius: 30px;
+border: none;
+width: 40px;
+height: 30px;
+background-color: aliceblue;
+
+
 }
 
 .divComments{
@@ -23,6 +37,11 @@ color: black;
     gap: 10px;
     
     
+
+}
+
+.commentContain{
+    display: flex;
 
 }
 
@@ -37,16 +56,28 @@ color: black;
 
 .pComment{
     color: black;
-    margin: 20px;}
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 h3{
     color: black;
+    margin-right: 15px;
 }
 
 .commentary{
+    display: flex;
+    flex-direction: column;
     border: 1 solid black;
-    background-color: rgba(117, 229, 249, 0.446);
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    
+    border-radius: 10px;
+}
+.numComments{
+    color: black;
 }
 
 .imgconversacion{
@@ -79,4 +110,14 @@ h3{
 .pdate{
     color: rgb(43, 25, 2);
     font-size: 10px;
+}
+
+.lapiz{
+    height: 10px;
+}
+
+form{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }

@@ -1,9 +1,16 @@
-import React from "react";
+import React,{useRef} from "react";
 import './comments.css'
+import axios from "axios";
 
-
+/* const Listcomments = () => {
+  const inputComment = useRef("")
+    return (
+      inputComment
+    )
+  }
+ */
 export default class Comments extends React.Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.state = {
       comments: [],
@@ -23,19 +30,24 @@ export default class Comments extends React.Component {
       comments: [...this.state.comments, this.state.comment],
       comment: ''
     });
+    let data = {
+      "chapter_id": "63ac47d8b4db2f7baacad498",
+      "user_id": "63ac47d8b4db2f7baacad498",
+      "text":"" //Listcomments
+  }
+    axios.post(
+      "http://localhost:8000/api/comments",//url del back
+      data //objeto que required el back     
+      )
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Comentario:
-            <input className="textareaComments" placeholder="Say something here..." value={this.state.comment} onChange={this.handleChange} />
-          </label>
-          <input className="inputComments" type="submit" value="Enviar" />
-        </form>
-        <div >
+      <div>        
+        <div>
           {this.state.comments.map((comment, index) => (
             <>
             <div className="commentary">
@@ -43,15 +55,18 @@ export default class Comments extends React.Component {
                 <img className="photoComment" src="https://conceptodefinicion.de/wp-content/uploads/2016/01/Perfil2.jpg" alt=""/>
                 <h3>Ignacio Borraz</h3>
               </div>
+              <div className="commentContain">
             <p className="pComment" key={index}>{comment}</p>
+              </div>
                 <div className="commentfooter">
             <div  className="commentimgcom">
             <img className="imgconversacion" src="/assets/comment.png" alt="aa" />
-            <p>12</p>
+            <p className="numComments">12</p>
             
             </div>
-            <div>
-            <button className="butonComment">Reply</button>
+            <div className="a">
+            <button className="butonComment">Reply
+            </button>
             </div>
             <p className="pdate">12 min ago</p>
             <div>
@@ -61,7 +76,18 @@ export default class Comments extends React.Component {
             </>
           ))}
         </div>
+        
+        <form onSubmit={this.handleSubmit}>
+          <label>            
+            <input type="text" /* ref={Listcomments}  */className="textareaComments"  minLength={1}
+        maxLength={200} placeholder="Say something here..." value={this.state.comment} onChange={this.handleChange} />
+          </label>
+          <input className="inputComments" type="submit" value="Enviar" />
+        </form>
       </div>
     );
   }
 }
+
+
+  

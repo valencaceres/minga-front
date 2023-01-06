@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-            <RouterProvider router={indexRouter}/>
+      <RouterProvider router={indexRouter}/>
   );
 }
 
