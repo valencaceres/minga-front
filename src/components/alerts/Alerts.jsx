@@ -1,13 +1,14 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Alerts() {
 /*     const store = useSelector(store =>  console.log(store)) */
     let view = useSelector(store => store.alertReducer.view)
     let messages = useSelector(store => store.alertReducer.messages)
     console.log(view)
-    const alerta = () => {
+/*     const alerta = () => {
       toast('notificacion', {  
         position: "top-center",
         autoClose: false,
@@ -18,17 +19,36 @@ export default function Alerts() {
         progress: undefined,
         theme: "light",
         })
-
-
+    } */
+    if(view){
+      toast(messages.map(message => message.message).join(<br/>),
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        })
     }
 
   return (
 
     <div>
-      <button onClick={alerta}>Hola</button>
-        {typeof messages === "string"? messages : messages = messages?.map(message => message.message).join("<br>")}
-        {view && messages}
-        <ToastContainer/>
+{/*         {typeof messages === "string"? messages : messages = messages?.map(message => message.message).join("<br>")}
+        {view && messages} */}
+        <ToastContainer position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"/>
     </div>
 
   )
