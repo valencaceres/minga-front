@@ -12,11 +12,11 @@ export const indexRouter = createBrowserRouter([
           path: "/",
           element: <Carousel />
         },
+
         {
           path: "/comments",
           element: <Comments />
         }
-
       ]
     },
   
