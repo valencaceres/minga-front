@@ -16,6 +16,12 @@ function handleSubmit(event) {
   setComments([...comments, newComment]);
   setNewComment('');}  
 
+function emptyInput () {
+  let vaciarForm = document.getElementById("input").value = "";
+
+  
+}
+
 function handleSendComment (event) {
   event.preventDefault()
   let data = {
@@ -43,7 +49,7 @@ function handleSendComment (event) {
             <div  className="commentimgcom">
             <img className="imgconversacion" src="/assets/comment.png" alt="aa" />
             <p className="numComments">12</p> 
-            <button className="butonComment">Reply &nbsp;&nbsp;&nbsp;&nbsp;             
+            <button className="butonComment">Reply          
             </button> 
             <img className="lapiz" src="/assets/lapiz.png" alt="Texto alternativo"/>          
             </div>            
@@ -52,17 +58,17 @@ function handleSendComment (event) {
           </div>
         ))}
 
-      <form onSubmit={handleSendComment}>
-        <input className="textareaComments"
+      <form onSubmit={handleSendComment} id="form">
+        <input id="input" className="textareaComments"
         placeholder="Say something here..."
           type="text"
           ref={inputComment}
           value={newComment}
-      
+          
           onChange={event => setNewComment(event.target.value)}
         />
-        <button className="inputComments" type="submit"></button>
-        <img  className="send" src="/assets/enviar.png" alt="" />
+        <button onClick={emptyInput} className="inputComments" type="submit"><img  className="send" src="/assets/enviar.png" alt="" /></button>
+        
       </form>
     </div>
   );
