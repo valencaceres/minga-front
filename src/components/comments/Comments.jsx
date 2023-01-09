@@ -8,6 +8,7 @@ export default function Comments(){
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const inputComment = useRef("")
+/*   const formRef = useRef(""); */
   const {mingaAlert} = alertActions;
   const disPatch = useDispatch()
 
@@ -21,18 +22,23 @@ function emptyInput () {
 
 }
 
+
+
 function handleSendComment (event) {
   event.preventDefault()
+  
   let data = {
       "chapter_id": "63ac47d8b4db2f7baacad498",
       "user_id": "63ac47d8b4db2f7baacad498",
       "text": inputComment?.current.value
   }
+/*   formRef.current?.reset(); */
   axios.post(
       "http://localhost:8000/api/comments",data)
       .then( res =>  disPatch(mingaAlert("Done")) )
       .catch(err =>  disPatch(mingaAlert(err.response.data.response))     
     )
+    
   }
 
   return (
@@ -57,7 +63,7 @@ function handleSendComment (event) {
           </div>
         ))}
 
-      <form onSubmit={handleSendComment} id="form">
+      <form /*  ref={formRef} */ onSubmit={handleSendComment} id="form">
         <input id="input" className="textareaComments"
         placeholder="Say something here..."
           type="text"
@@ -66,7 +72,7 @@ function handleSendComment (event) {
           
           onChange={event => setNewComment(event.target.value)}
         />
-        <button  onClick={emptyInput}  className="inputComments" type="submit"><img  className="send" src="/assets/enviar.png" alt="" /></button>
+        <button onClick={emptyInput}  className="inputComments" type="submit"><img  className="send" src="/assets/enviar.png" alt="" /></button>
         
         
       </form>
