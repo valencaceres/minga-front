@@ -14,7 +14,7 @@ export default function Nav() {
     <nav className='nav-container'>
      
     <Anchor to={"/"}><img className='imgLogo' src="/assets/logo1.png" alt="" /></Anchor>
-
+ 
     <button onClick={handleMenu} className="menuButton">Menu</button>
         {
           variable
