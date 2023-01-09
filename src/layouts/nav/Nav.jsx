@@ -11,7 +11,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className='nav-container'>
+    <nav >
      
     <Anchor to={"/"}><img className='imgLogo' src="/assets/logo1.png" alt="" /></Anchor>
  
