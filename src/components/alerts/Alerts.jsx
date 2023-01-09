@@ -37,8 +37,6 @@ export default function Alerts() {
   return (
 
     <div>
-{/*         {typeof messages === "string"? messages : messages = messages?.map(message => message.message).join("<br>")}
-        {view && messages} */}
         <ToastContainer/>
 
     </div>
