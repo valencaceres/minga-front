@@ -1,11 +1,11 @@
 
 import React, { useRef } from "react";
-import "./addnewcomic.css";
+import "./newcomic.css";
 import axios from "axios";
 import  alertActions from '../../store/alert/actions.js'
 import { useDispatch } from 'react-redux'
 
-const AddNewComic = () => {
+const NewComic = () => {
     const {mingaAlert} = alertActions
     const dispatch = useDispatch()
     const inputAuthorId = useRef("");
@@ -114,4 +114,4 @@ const AddNewComic = () => {
     );
 };
 
-export default AddNewComic;
+export default NewComic
