@@ -36,7 +36,17 @@ input{
     background-color: rgb(83, 82, 82);
 }
 @media (min-width:320px) and (max-width: 767px){
+    .chapters{
+        width: 80%;
+    }
+    .form{
+        width: 100%;
+    }
     .submit{
-        width: 35%;
+        width: 50% !important;
+    }
+    .input{
+        width: 100%;
+        font-size: 13px;
     }
 }
