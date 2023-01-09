@@ -44,3 +44,37 @@
     align-items: center;
     height: 10vh;
 }
+@media (min-width: 810px) and (max-width: 1080px){
+    .submit-1{
+        color: rgb(122, 255, 222);
+        font-size: 3vw;
+       
+    }
+    .container-info-card-button{
+    
+        display: flex;
+        width: 25vw;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+    }
+}
+@media (min-width: 412px) and (max-width: 810px){
+    .submit-1{
+        color: rgb(122, 255, 222);
+        font-size: 3vw;
+       
+    }
+    .container-info-card-button{
+    
+        display: flex;
+        width: 50vw;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+    }
+    .logos{
+        color: black;
+        height: 5vh;
+    }
+}

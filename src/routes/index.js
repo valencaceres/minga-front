@@ -14,7 +14,7 @@ export const indexRouter = createBrowserRouter([
           path: "/",
           element: <Carousel />
         },{
-          path :"/my-comics",
+          path :"/mycomics",
           element: <MyComics />
         },{
         path :"/new-comic",
