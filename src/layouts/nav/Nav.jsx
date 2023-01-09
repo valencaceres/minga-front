@@ -22,9 +22,9 @@ export default function Nav() {
           (
             <nav className="activo">
               <div className="navItems">
-              <Anchor to={"/"}>Home</Anchor>
-              <Anchor to={"/comics"}>Comics</Anchor>
-              <Anchor to={"/form"}>Form</Anchor>
+              <Anchor className='item' to={"/"}>Home</Anchor>
+              <Anchor className='item' to={"/comics"}>Comics</Anchor>
+              <Anchor className='item' to={"/chapters"}>Chapters</Anchor>
               </div>
           </nav>
           )

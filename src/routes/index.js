@@ -12,7 +12,10 @@ export const indexRouter = createBrowserRouter([
         {
           path: "/",
           element: <Carousel />
-        },
+        },{
+          path: "/chapters",
+          element: <Chapters/>
+        }
       ]
     },
   
