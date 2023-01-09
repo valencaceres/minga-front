@@ -34,3 +34,23 @@ input{
 .submit:hover{
     background-color: rgb(83, 82, 82);
 }
+@media (min-width: 810px) and (max-width: 1080px){
+    .submit{
+        border: none;
+        background-color: rgb(116, 116, 116);
+        width: 20vw;
+        height: 5vh;
+        border-radius: 50px;
+    }
+
+}
+@media (min-width: 412px) and (max-width: 1080px){
+    .submit{
+        border: none;
+        background-color: rgb(116, 116, 116);
+        width: 30vw;
+        height: 5vh;
+        border-radius: 50px;
+    }
+
+}

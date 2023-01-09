@@ -93,12 +93,9 @@ nav {
     color: rgb(189, 189, 189);
   }
 }
-<<<<<<< HEAD
-=======
 
 @media (max-width: 500px){
   .menuButton{
     width: 20%;
   }
 }
->>>>>>> 150ed3f33c09af210fc8c157727a32317b9e1312
