@@ -17,9 +17,8 @@ function handleSubmit(event) {
   setNewComment('');}  
 
 function emptyInput () {
-  let vaciarForm = document.getElementById("input").value = "";
+ /*  let vaciarForm = document.getElementById("input").value = ""; */
 
-  
 }
 
 function handleSendComment (event) {
@@ -67,7 +66,8 @@ function handleSendComment (event) {
           
           onChange={event => setNewComment(event.target.value)}
         />
-        <button onClick={emptyInput} className="inputComments" type="submit"><img  className="send" src="/assets/enviar.png" alt="" /></button>
+        <button  onClick={emptyInput}  className="inputComments" type="submit"><img  className="send" src="/assets/enviar.png" alt="" /></button>
+        
         
       </form>
     </div>
