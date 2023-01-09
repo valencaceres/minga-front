@@ -16,16 +16,20 @@ border-radius: 15px;
 border: 1px solid gray;
 }
 
+.textareaComments:active{
+background-color: rgba(255, 255, 255, 0.366);
+border: none;
+}
+
 .inputComments{
-color: black;
 position: relative;
 right: 50px;
-top: 5px;
-border-radius: 30px;
+top: 3px;
+border-radius: 40%;
 border: none;
-width: 40px;
+width: 30px;
 height: 30px;
-background-color: aliceblue;
+background-color: rgb(255, 255, 255);
 
 
 }
@@ -103,8 +107,13 @@ h3{
     height: 25px;
     width: 25px;
     position: relative;
-    right: 85px;
-    top: 8px;
+    right: 0px;
+    top: 4px;
+}
+
+.send:hover{
+    filter: saturate(180%);
+    -webkit-transform:scale(1.3);transform:scale(1.3);
 }
 
 .butonComment{
@@ -137,4 +146,12 @@ form{
     margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 600px){
+    .textareaComments{
+        height: 40px;
+        width: 250px;
+        margin-left: 50px;
+    }
 }
