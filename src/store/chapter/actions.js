@@ -1,5 +1,23 @@
-import axios from "axios"
-import { createAsyncThunk } from "@reduxjs/toolkit"
+import axios from "axios";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+
+const getChapter = createAsyncThunk(
+    "getChapter",
+    async ({id, pages}) => {
+        try{
+            const response = await axios.get(`http://localhost:8000/api/chapters?comic_id=${id}&page=${pages}`)
+            console.log(response)
+            return {
+                response: {chapters: response.data},
+                message: "Chapter obtained"
+            }
+        }
+        catch(error){
+            console.log(error)
+            return {
+                response: {chapters: error.response.data},
+                message: "Error chapter not found"
+            }}});
 
 const newChapter = createAsyncThunk("newChapter", async (chapter) => {
     try {
@@ -77,12 +95,12 @@ const getChapterbyorderandcomic = createAsyncThunk(
     }
 )
 
-
 const chapterActions = {
     newChapter,
     getChapterDetails,
     getChapters,
-    getChapterbyorderandcomic
+    getChapterbyorderandcomic,
+    getChapter
 }
 
 export default chapterActions
