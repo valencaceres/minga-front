@@ -25,7 +25,7 @@ function Pages() {
     dispatch(getChapters("63bf08f6579da57eb3ad5fb2"));
   }, [id]);
 
-  console.log(chapterStore.chapter.comic_id);
+  console.log(chapterStore.chapter?.comic_id);
   const getPagesImages = () => {
     if (chapterStore.chapter?.pages?.length === 0) {
       return <p>Loading...</p>;
@@ -62,7 +62,7 @@ const traerPageActual = () =>{
       console.log("end chapter");
 
       const nextchaptes = chapterStore.chapters.response.find(
-        (chapter) => chapterStore.chapter.order + 1 === chapter.order
+        (chapter) => chapterStore.chapter?.order + 1 === chapter.order
       );
 
       navigation(`/pages/${nextchaptes._id}`);
@@ -80,25 +80,25 @@ const traerPageActual = () =>{
       setCurrent(current - 1);
       console.log(current)
     }
-    else if (chapterStore.chapter.order === 1) {
+    else if (chapterStore.chapter?.order === 1) {
       navigation(`/comic/${chapterStore.chapter.comic_id}`);
     }
     else if (current === 0) {
       const prevchaptes = chapterStore.chapters.response.find(
-        (chapter) => chapterStore.chapter.order - 1 === chapter.order
+        (chapter) => chapterStore.chapter?.order - 1 === chapter.order
       );
       navigation(`/pages/${prevchaptes._id}`);
-      setCurrent(prevchaptes.pages.length - 1);
+      setCurrent(prevchaptes.pages?.length - 1);
   }
   }
 
   const getChapterTitle = () => {
-    if (chapterStore?.chapter.length === 0) {
+    if (chapterStore?.chapter?.length === 0) {
       return <p>Loading...</p>;
     } else {
       return (
         <h2 className="titulo">
-          Cap n°: {chapterStore.chapter.order} - {chapterStore.chapter?.title}
+          Cap n°: {chapterStore.chapter?.order} - {chapterStore.chapter?.title}
         </h2>
       );
     }
