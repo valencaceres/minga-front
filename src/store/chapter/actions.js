@@ -37,7 +37,7 @@ const newChapter = createAsyncThunk("newChapter", async (chapter) => {
     }
 });
 
-const getChapterDetails = createAsyncThunk("getChapter", async (_id) => {
+const getChapterDetails = createAsyncThunk("getChapterDetails", async (_id) => {
     try {
         const response = await axios.get(
             `http://localhost:8000/api/chapters/pages/${_id}`
