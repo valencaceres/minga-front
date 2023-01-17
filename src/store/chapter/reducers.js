@@ -54,7 +54,7 @@ const chapterReducer = createReducer(initialState, (builder) =>  {
             return newState
         }
         )
-    .addCase(getChapter.fulfilled,
+   .addCase(getChapter.fulfilled,
         (state, action) => {
             let newState = {
                 chapters: action.payload.response.chapters,
@@ -62,7 +62,7 @@ const chapterReducer = createReducer(initialState, (builder) =>  {
             }
             return newState
 }
-)
+) 
 })
 
 export default chapterReducer

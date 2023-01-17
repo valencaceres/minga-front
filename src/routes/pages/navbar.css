@@ -18,7 +18,11 @@
     margin: 15px;
     color: white;
 }
+.nav_items{
+    display: flex;
+}
 .nav_items a{
+    display: flex;
     margin: 20px;
     color: #000000;
     position: relative;
