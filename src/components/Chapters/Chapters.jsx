@@ -54,7 +54,7 @@ export default function Chapters() {
               />
               <p className="titlechapter">{chapter.title}</p>
               <div className="anchorcontainer">
-                <Anchor to={"/pages/:id"} className="anchor">
+                <Anchor to={`/pages/${chapter._id}`} className="Anchor">
                   Read
                 </Anchor>
               </div>
