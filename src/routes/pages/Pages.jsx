@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "./NavBar";
 import "./navbar.css";
 import "./pages.css";
+import { Link as Anchor } from "react-router-dom";
 
 //http://localhost:3000/pages/63bf08f7579da57eb3ad5fb4#
 //use params
@@ -109,6 +110,9 @@ const traerPageActual = () =>{
       <Navbar />
       <div className="container">
         <div className="titleContainer">{getChapterTitle()}</div>
+        <Anchor className="back" to={`/comic/${chapterStore.chapter?.comic_id}`}>
+          <img className="imgBack" src="/assets/back.png" alt="" /> Back to Chapters
+        </Anchor> 
         <div className="comicPage">
           {getPagesImages()}
           <div className="leftButton" onClick={prev}></div>

@@ -110,6 +110,26 @@ object-fit: contain;
     color: black;
     font-size: 22px;
 }
+/* .back{
+    background-color: black;
+    color: white;
+    width: 50px;
+   text-align: center;
+   height: 50px;
+
+} */
+
+.back{
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
+
+.imgBack{
+    height: 50px ;
+    width: 50px; 
+}
 
 .puntos{
     height: 50px;
