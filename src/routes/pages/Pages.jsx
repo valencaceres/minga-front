@@ -108,6 +108,7 @@ const traerPageActual = () =>{
     <>
       <Navbar />
       <div className="container">
+        
         <div className="titleContainer">{getChapterTitle()}</div>
         <div className="comicPage">
           {getPagesImages()}
