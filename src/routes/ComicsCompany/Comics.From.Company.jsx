@@ -107,7 +107,7 @@ const ComicsFromCompany = () => {
               <button className="buttonPagination" onClick={prev}>
                 prev
               </button>
-            )},
+            )}
             {lengthOfComics?.length < 1 ? null : (
               <button className="buttonPagination" onClick={next}>
                 next
