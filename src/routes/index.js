@@ -43,13 +43,14 @@ export const indexRouter = createBrowserRouter([
           element: <Comments />
         },
 
-        {
-          path: "/company/:id",
-          element: <ComicsFromCompany/>
-        }
 
       ]
       
+    },
+    
+    {
+      path: "/company/:id",
+      element: <ComicsFromCompany/>
     },
     
 
