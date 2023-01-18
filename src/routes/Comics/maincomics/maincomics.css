@@ -40,15 +40,13 @@ h1{
     font-size: small;
   }
 
-  main {
-    height: 4500px;
+   .main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: absolute;
-   
-  }
+    align-items: center;
+  } 
 
   .main-background{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../public/assets/backgorundcomic.jpg");
@@ -89,7 +87,7 @@ h1{
     
   }
  .comics-container{
-  height: 800%;
+  height: 100%;
   width: 95vw;
   background-color: rgb(202, 202, 202);
   border-radius: 100px;
@@ -98,11 +96,11 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
  }
  .explore-container{
- 
-  width: 80vw;
+  
+  width: 77%;
   margin-top: 1rem;
   padding: 1rem;
   display: flex;
@@ -175,7 +173,7 @@ h1{
  .container-cards{
   
   width: 70vw;
-  height: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -189,9 +187,15 @@ h1{
   justify-content: space-around;
 
  }
+
+.nav{
+  width: 100%;
+ 
+}
+
  .botonnextprev{
   width: 5rem;
-  background-color: rgb(106, 189, 189);
+  background-color:#a8a8a8;;
   border-radius: 10rem;
   height: 2rem;
   border: none;
@@ -210,7 +214,7 @@ h1{
       margin-top: 180px;
     }
     .ranges-container{
-      border: solid red;
+      
       height: 10rem;
       width: 100vw;
       padding: 1rem;
@@ -256,6 +260,37 @@ h1{
       padding: 1rem;
       font-size: 87%
      }
+     .explore-container{
+      
+      width: 77%;
+      margin-top: 1rem;
+      padding: 1rem;
+      display: flex;
+     }
+     
+     .comics-container{
+      height: 100%;
+      width: 95vw;
+      background-color: rgb(202, 202, 202);
+      border-radius: 50px;
+      position: relative;
+      top: -100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: space-between;
+      
+     }
+     .container-cards{
+  
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 50px;
+     }
   }
 
   @media (max-width:440px) {
@@ -270,4 +305,5 @@ h1{
     .pHeader{
       font-size: 15px;
     }
+    
   }
