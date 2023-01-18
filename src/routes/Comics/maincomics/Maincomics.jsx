@@ -116,7 +116,7 @@ const Maincomics = () => {
                         )}
                     </div>
                     <div>
-                        {lengthOfComics?.length < 1 ? null : (
+                        {lengthOfComics?.length < 10 ? null : (
                             <button onClick={next} className="botonnextprev">
                                 next
                             </button>
