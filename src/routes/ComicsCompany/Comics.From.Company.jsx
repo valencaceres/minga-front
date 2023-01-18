@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import comicActions from "../../store/ComicsFromCompany/actions";
 import FilterCategory from "./FIlterCategory";
 import { useParams } from "react-router-dom";
-import Navbar from "../pages/NavBar";
+import Navbar from "../../layouts/navbar/NavBar";
 const { obtenerComics } = comicActions;
 
 const ComicsFromCompany = () => {

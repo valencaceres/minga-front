@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Chapters from '../../components/Chapters/Chapters.jsx';
 import comicAction from '../../store/comic/actions.js';
 import { useParams } from 'react-router-dom';
-import NavBar from '../../routes/pages/NavBar'
+import NavBar from '../../layouts/navbar/NavBar'
 import './comic.css'
 
 const {getComic} = comicAction

@@ -2,7 +2,7 @@ import React from 'react';
 import Navcomics from "../../components/navcomics/Navcomics"
 import Maincomics from "./maincomics/Maincomics"
 import "./comics.css"
-import NavBar from '../pages/NavBar'
+import NavBar from '../../layouts/navbar/NavBar'
 
 
 function Comics() {
