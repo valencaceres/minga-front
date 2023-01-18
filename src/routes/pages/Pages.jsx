@@ -107,6 +107,7 @@ const traerPageActual = () =>{
   return (
     <>
       <Navbar />
+      <div className="header"> </div>
       <div className="container">
         <div className="titleContainer">{getChapterTitle()}</div>
         <Anchor className="back" to={`/comic/${chapterStore.chapter?.comic_id}`}>

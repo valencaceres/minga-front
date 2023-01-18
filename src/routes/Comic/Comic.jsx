@@ -28,8 +28,10 @@ useEffect(() => {
 },[])
 const {id} = useParams()
   return (
+    <>
+    <NavBar/>
     <div>
-      <NavBar/>
+     
       <div className='content'>
       <img className='comicImage' src={comic.comics.response?.photo} alt="" />
       <div className='titlecenter'>
@@ -64,5 +66,6 @@ const {id} = useParams()
       }
       </div>
     </div>
+    </>
   )
 }
