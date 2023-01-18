@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./navbar.css"
+import  {Link as Anchor} from 'react-router-dom'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -13,9 +14,9 @@ const Navbar = () => {
             </div>
             <img className="imgNav" src="/assets/logo1.png" alt="" />
             <div className={`nav_items ${isOpen && "open"}`}>
-            <a className="anchor" href="/">Home</a>
-            <a className="anchor" href="/comics">My comics</a>
-            <a className="anchor" href="#">Logout</a>      
+            <Anchor className="anchor" to={"/"}>Home</Anchor>
+            <Anchor className="anchor" to={"/comics"}>My comics</Anchor>
+            <Anchor className="anchor" to={"#"}>Logout</Anchor>      
             </div>
             
         </div>
