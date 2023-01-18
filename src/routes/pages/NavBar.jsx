@@ -12,7 +12,7 @@ const Navbar = () => {
             </div>
             <img className="imgNav" src="/assets/logo1.png" alt="" />
             <div className={`nav_items ${isOpen && "open"}`}>
-            <a className="anchor" href="#">Home</a>
+            <a className="anchor" href="/">Home</a>
             <a className="anchor" href="#">My comics</a>
             <a className="anchor" href="#">Logout</a>      
             </div>

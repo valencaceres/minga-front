@@ -9,8 +9,9 @@ function Comics() {
     return (
         <>
         <div className='nav-container' >
-            <NavBar/>
+            
         </div>    
+        <NavBar/>
             <Maincomics />
            
         </>
