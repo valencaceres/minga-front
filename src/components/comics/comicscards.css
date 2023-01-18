@@ -45,6 +45,7 @@
     height: 30vh;
 
 }
+
 @media (min-width:412px) and (max-width:1000px){
     .card{
         height: 20vh;
