@@ -86,7 +86,7 @@ const Maincomics = () => {
                     </div>
                 </div>
             </div>
-            <div className="comics-container">
+            <div className="comics-containerr">
                 <div className="explore-container">
                     <h2>Explore</h2>
                 </div>
