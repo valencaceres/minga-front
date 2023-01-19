@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner-buttons{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+
+    justify-content: space-evenly;
+    margin-top: 8vh;
+}
+
+.conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.seinen{
+    
+    padding: 5px;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 12vw;
+    font-size: 1rem;
+    background-color:rgb(221, 190, 149);
+}
+
+
+.conteiner-1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-conteiner{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+   
+}
+.contains{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 90%;
+    margin: 1rem 0;
+}
+
+.border-conteiner-1{
+    height: 70%;
+    margin-top: 7vh;
+    border-left: 6px solid rgb(146, 56, 230)
+}
+
+.left-conteiner, h3{
+    color: rgb(146, 56, 230);
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.buttons-edit{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(194, 166, 221);
+    color: rgb(146, 56, 230);
+    border: none;
+    border-radius: 20%;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 8px;
+
+
+}
+
+main{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    height: 100%;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.buttons-delete{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(249, 202, 190);
+    color: rgb(219, 76, 40);
+    border: none;
+    border-radius: 20%;
+}
+
+.img-card{
+    display: flex;
+    justify-content: end;
+    width: 200px;
+    height: 200px;
+    border-radius: 130px 20px 20px 130px;
+    border: none;
+
+    
+}
+
+.border-conteiner-2{
+    border-left: 8px solid rgb(237, 118, 75);
+}
+
+.border-conteiner-3{
+    border-left: 8px solid rgb(56, 230, 126);
+}
+
+.title-card-2{
+    color: rgb(237, 118, 75) ;
+}
+
+.title-card-3{
+    color: rgb(56, 230, 126) ;
+}
+
+.slideshow-conteiner{
+    display: block;
+}
+
+.wrap{
+    height: 450vh;
+    width: 95vw;
+    background-color: rgb(202, 202, 202);
+    border-radius: 100px;
+    position: relative;
+    top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.h2card{
+    color: black;
+}
+
+.buttonPagination{
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.conteinerButtonsPagination{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+@media (max-width: 575px){
+    .conteiner-buttons{
+        display: flex;
+        gap: 10px;
+        width: 200px;
+        font-size: 80%;
+}
+.button1{
+    border-radius: 1rem;
+    background-color: rgb(221, 190, 149);
+    border: none;
+    width: 5vw;
+    font-size: 1rem;
+    font-weight: 600;
+    color:  rgb(170, 106, 22);
+    opacity: 0.6;
+
+}
+
+.active6, .active5, .active4, .active3, .active2, .active1 {
+    opacity: 6;
+}
+
+.img-card{
+    height: 200px;
+    width: 150px;
+}
+}
