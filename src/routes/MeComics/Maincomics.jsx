@@ -72,7 +72,7 @@ const Maincomics = () => {
             </div>
             <div className="main-background">
                 <div className="section2">
-                    <h1>COMICS</h1>
+                    <h1>Nombre del Author/Company</h1>
                     <div className="input-wrapper">
                         <input
                             ref={inputText}
