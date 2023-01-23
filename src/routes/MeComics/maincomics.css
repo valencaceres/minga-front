@@ -48,7 +48,7 @@ h1{
     align-items: center;
   } 
 
-  .main-background{
+  .main-back{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/assets/imagen15.png");
     background-position: center;
     height: 90vh;

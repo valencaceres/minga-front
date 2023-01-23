@@ -70,7 +70,7 @@ const Maincomics = () => {
             <div className="nav">
             <Navbar/>
             </div>
-            <div className="main-background">
+            <div className="main-back">
                 <div className="section2">
                     <h1>Nombre del Author/Company</h1>
                     <div className="input-wrapper">
@@ -88,18 +88,7 @@ const Maincomics = () => {
             </div>
             <div className="comics-containerr">
                 <div className="explore-container">
-                    <h2>Explore</h2>
-                </div>
-                <div className="ranges-container">
-                    <div className="ranges-1">
-                        <p>Adventures</p>
-                    </div>
-                    <div className="ranges-2">
-                        <p>Nostalgic</p>
-                    </div>
-                    <div className="ranges-3">
-                        <p>Popular</p>
-                    </div>
+                    
                 </div>
                 
                     <ComicsCategories />
