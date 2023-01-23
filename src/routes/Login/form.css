@@ -57,7 +57,7 @@ input{
     border-radius: 1rem;
     border:1px solid #0060df;
 }
-input[type="submit"]{
+.inputSubmitLog{
     color: #222;
     font-weight: bold;
     width: auto;

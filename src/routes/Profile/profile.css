@@ -1,0 +1,56 @@
+.editContent{
+    display: flex;
+    justify-content: center;
+}
+
+.profileImage{
+    margin-top: 5rem;
+    height: 20vh;
+    width: 10vw;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.contentForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.formProfile{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+.inputProfile{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-bottom: grey 1px solid;
+    color: black;
+}
+.inputSend{
+    width: 35%;
+    height: 7vh;
+    background-color: #34D399;
+    border-radius: 50000px;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.deleteButton{
+    width: 35%;
+    height: 7vh;
+    border-radius: 50000px;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #FBDDDC;
+    color: #EE8380;;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
