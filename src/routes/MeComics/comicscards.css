@@ -8,6 +8,10 @@
     margin: 2rem 0rem 0 0;
     
 }
+.butonDelete, .butonEdit {
+    color: black;
+    z-index: 10;
+}
 
 .divCard{
     height: 100%;

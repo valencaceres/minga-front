@@ -1,19 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./maincomics.css";
-import ComicsCategories from "../../components/comics/ComicsCategories";
+import ComicsCategories from "./ComicsCategories";
 import { useDispatch, useSelector } from "react-redux";
 import comicsActions from "../../store/comics/actions";
-import ComicsCards from "../../components/comics/ComicsCards";
+import ComicsCards from "./ComicsCards";
 import Navbar from "../../layouts/navbar/NavBar";
+/* import  myComicsAction  from '../../store/mycomics/actions' */
+
 const { getComics } = comicsActions;
+/* const {getMycomics} = myComicsAction */
+        
 
 const Maincomics = () => {
+/* 
+    let token = useSelector((store)=> store.auth.token)
+    console.log(token); */
+
+
     const comicStore = useSelector((store) => store.comics.comics);
     console.log(comicStore);
     const text = useSelector((store) => store.comics.text);
     useSelector((store) => store.comics);
     const inputCategory = useSelector(
-        (store) => store.filterCategoryComic.filterCategory
+    (store) => store.filterCategoryComic.filterCategory
     );
 
     const [load, setLoad] = useState(false);
@@ -42,35 +51,14 @@ const Maincomics = () => {
         );
     }, [load, inputCategory, pages]);
 
-    /*    const seeMore = () => {
-         const limit = comicStore.comics?.comics.length
-         dispatch(
-            getComics({
-                inputText: inputText.current.value,
-                inputSort,
-                inputCategory: inputCategory.join(","),
-                inputLimit: limit + 5,
-            })
-         )
-     }
-    
-     const boton =() => {
-         const limit = comicStore.comics?.comics?.length
-         if (limit === 34){
-             return <div className="noMore"> No More Comics</div>
-         }else{
-            return (
-                 <button onClick={seeMore} className="buttonSeemore">See More</button>
-             )
-         }
- } */
+
 
     return (
-        <main className="main">
+        <main className="mainn">
             <div className="nav">
             <Navbar/>
             </div>
-            <div className="main-back">
+            <div className="main-b">
                 <div className="section2">
                     <h1>Nombre del Author/Company</h1>
                     <div className="input-wrapper">

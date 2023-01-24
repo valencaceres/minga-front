@@ -8,14 +8,13 @@ export default function CategoryButton(props) {
     const { id,index, name} = props
     let category = useSelector((store) => store.comics.category)
     
-    if (category.length > 0){
+    if (category?.length > 0){
         category = category?.split(",")
         category = category?.includes(id)
         console.log(category)
     } else {
         category = false
     }
-    
     const [click, setClick] = useState(category)
     const [color, setColor] = useState(category)
     const dispatch = useDispatch()

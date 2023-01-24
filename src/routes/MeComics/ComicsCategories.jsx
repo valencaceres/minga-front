@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import CategoryButton from '../../components/comics/CategoryButton'
+import CategoryButton from './CategoryButton'
 import "./comicscategories.css"
 
 

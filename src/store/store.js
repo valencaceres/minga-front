@@ -8,8 +8,10 @@ import pages   from "./chapter/reducers.js";
 import comicComp from "./ComicsFromCompany/reducers.js";
 import comicsFromCategoryReducer from './ComicsFromCategories/reducers.js'
 import authReducer from './auth/reducers';
+import myComicReducer from "./mycomics/reducers.js";
 
 const store = configureStore({
+  
     reducer: {
         alertReducer,
         comic:comicReducer,
@@ -19,7 +21,8 @@ const store = configureStore({
         filterCategoryComic: filterCategoryReducer,
         comicComp ,
         comicsFromCategoryReducer,
-        auth: authReducer
+        auth: authReducer,
+        myComic: myComicReducer
     }
   })
 
