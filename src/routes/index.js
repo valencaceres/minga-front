@@ -11,6 +11,7 @@ import Comics from "./Comics/Comics.jsx";
 import NewCompany from "./newCompany/NewCompany.jsx";
 import Comic from "./Comic/Comic.jsx";
 import Pages from "./pages/Pages.jsx";
+import EditChapterRoute from "./EditChapter/EditChapterRoute.jsx"
 
 
 
@@ -61,6 +62,10 @@ export const indexRouter = createBrowserRouter([
         path: "/comics",
         element: <Comics />,
     },
+    {
+      path: "/edit-chapter",
+      element: <EditChapterRoute />,
+  },
 
 
   ])

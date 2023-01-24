@@ -94,13 +94,35 @@ const getChapterbyorderandcomic = createAsyncThunk(
         }
     }
 )
+const editChapter = createAsyncThunk("getChapters", async (chapter) => {
+    console.log(chapter)
+    try {
+        const body = {
+            [chapter.category] : chapter.data
+        } 
+        const response = await axios.put(
+            `http://localhost:8000/api/chapters/${chapter.id}`,  body, //ruta , / segundo es el body lo que mando... 
+            
+        )
+        return {
+            response: { chapters: response.data },
+            message: "Chapter editado",
+        }
+    } catch (error) {
+        return {
+            response: { chapters: error.response.data },
+            message: "Error edit chapter",
+        }
+    }
+})
 
 const chapterActions = {
     newChapter,
     getChapterDetails,
     getChapters,
     getChapterbyorderandcomic,
-    getChapter
+    getChapter,
+    editChapter
 }
 
 export default chapterActions

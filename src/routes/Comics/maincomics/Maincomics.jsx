@@ -9,9 +9,13 @@ const { getComics } = comicsActions;
 
 const Maincomics = () => {
     const comicStore = useSelector((store) => store.comics.comics);
+
     console.log(comicStore);
+
     const text = useSelector((store) => store.comics.text);
+
     useSelector((store) => store.comics);
+    
     const inputCategory = useSelector(
         (store) => store.filterCategoryComic.filterCategory
     );
@@ -36,34 +40,12 @@ const Maincomics = () => {
             getComics({
                 inputText: inputText.current?.value,
                 inputCategory: inputCategory.join(","),
-
                 pages: pages,
             })
         );
     }, [load, inputCategory, pages]);
 
-    /*    const seeMore = () => {
-         const limit = comicStore.comics?.comics.length
-         dispatch(
-            getComics({
-                inputText: inputText.current.value,
-                inputSort,
-                inputCategory: inputCategory.join(","),
-                inputLimit: limit + 5,
-            })
-         )
-     }
-    
-     const boton =() => {
-         const limit = comicStore.comics?.comics?.length
-         if (limit === 34){
-             return <div className="noMore"> No More Comics</div>
-         }else{
-            return (
-                 <button onClick={seeMore} className="buttonSeemore">See More</button>
-             )
-         }
- } */
+
 
     return (
         <main className="main">
