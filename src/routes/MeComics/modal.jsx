@@ -16,7 +16,6 @@ const Modal = ({ isOpen, onClose }) => {
         })
       }
       
-
     const dispatch = useDispatch()
     const inputTitle = useRef("");
     const inputPhoto = useRef("");
