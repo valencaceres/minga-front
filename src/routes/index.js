@@ -71,7 +71,14 @@ export const indexRouter = createBrowserRouter([
       path: "/edit-chapter",
       element: <EditChapterRoute />,
   },
-
+  ,{
+    path:"/signin",
+    element:<SignIn/>
+  },
+  {
+    path:"/signup",
+    element:<SignUp/>
+  }
 
   ])
 
