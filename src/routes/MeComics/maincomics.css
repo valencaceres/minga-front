@@ -71,6 +71,7 @@ h1{
   }
 
   .search-text-input{
+    display: none;
     padding: 0px 0px 0px 80px ;
     margin: 10px 0;
     border: 2px solid #eee;

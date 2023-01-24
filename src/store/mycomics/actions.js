@@ -1,4 +1,4 @@
-import { createAsyncThunk, AsyncThunk  } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 let getMycomics = createAsyncThunk(
@@ -12,8 +12,8 @@ let getMycomics = createAsyncThunk(
             console.log(token);
             console.log(response);
             return{
-                    response: {comics:  response.data  } 
-             }
+                    response: {comics: response.data} 
+            }
         }catch (error){
             console.log(error)
         }

@@ -1,9 +1,22 @@
 import React, { useRef }  from 'react';
 import './modal.css'
 import { useDispatch } from 'react-redux'
+import Swal from 'sweetalert2';
 
 
 const Modal = ({ isOpen, onClose }) => {
+
+    const editSucces = () => {
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+      
+
     const dispatch = useDispatch()
     const inputTitle = useRef("");
     const inputPhoto = useRef("");
@@ -17,7 +30,7 @@ const Modal = ({ isOpen, onClose }) => {
     <div className="modal-overlay">
     <div className="modal-content">
     <form className="form" >
-                
+                  <h2 className='h2form'>Edit Comic</h2>
                 <label className='labelform' htmlFor="title">
                     
                     <input
@@ -58,9 +71,10 @@ const Modal = ({ isOpen, onClose }) => {
                         ref={inputCategory}
                     />
                 </label>
-                <input className="ssubmit" type="submit"value="Edit" />
+                <input onClick={editSucces} className="ssubmit" type="submit"value="Edit" />
+                <button className="modal-close-btn" onClick={onClose}>Close</button>
             </form>
-      <button className="modal-close-btn" onClick={onClose}>Close</button>
+      
     </div>
   </div>
   );

@@ -24,15 +24,20 @@
   .modal-body {
     font-size: 18px;
   }
-  
+  .h2form{
+    font-weight: normal;
+    color: black;
+    font-size: 25px;
+
+  }
   .modal-close-btn {
-    float: right;
-    padding: 10px;
     border: none;
     background-color: #f44336;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 50px;
+    margin-bottom: 5px;
+
   }
 
   .form{
@@ -67,30 +72,25 @@
 .ssubmit{
     border: none;
     background-color: #34D399;
-    width: 10vw;
-    height: 5vh;
+    width: 12vw;
+    height: 6vh;
     border-radius: 50px;
 }
 .ssubmit:hover{
     background-color: rgb(83, 82, 82);
 }
 @media (min-width: 810px) and (max-width: 1080px){
-    .ssubmit{
-        border: none;
-        background-color: rgb(116, 116, 116);
-        width: 20vw;
-        height: 5vh;
-        border-radius: 50px;
-    }
+   
 
 }
 @media (min-width: 412px) and (max-width: 1080px){
-    .submit{
-        border: none;
-        background-color: rgb(116, 116, 116);
-        width: 30vw;
-        height: 5vh;
-        border-radius: 50px;
-    }
+    
 
+}
+
+@media (max-width: 800px){
+  .modal-content{
+    width: 100%;
+    height: 100%;
+  }
 }
