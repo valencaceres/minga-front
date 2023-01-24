@@ -12,9 +12,19 @@ import { Link as Anchor } from "react-router-dom";
 const { getChapterDetails, getChapters } = chapterActions;
 
 function Pages() {
+<<<<<<< HEAD
   const [current, setCurrent] = useState(JSON.parse(localStorage.getItem('page')));
 
   const chapterStore = useSelector((state) => state?.pages);
+=======
+  const [current, setCurrent] = useState(
+    JSON.parse(localStorage.getItem("page"))
+  );
+
+  const chapterStore = useSelector((state) => state?.pages);
+  const comicId = useSelector((state) => state?.chapters?.chapter?.comic_id);
+  console.log(comicId);
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
 
   const dispatch = useDispatch();
   const navigation = useNavigate();
@@ -22,24 +32,41 @@ function Pages() {
   console.log(chapterStore);
   useEffect(() => {
     dispatch(getChapterDetails(id));
+<<<<<<< HEAD
     dispatch(getChapters("63bf08f6579da57eb3ad5fb2"));
   }, [id]);
 
   console.log(chapterStore.chapter?.comic_id);
+=======
+    dispatch(getChapters(comicId));
+  }, [id,comicId]);
+
+  console.log(chapterStore.chapter?.comic_id);
+/*   console.log('capitulo 5',chapterStore?.chapter.pages[5]) */
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
   const getPagesImages = () => {
     if (chapterStore.chapter?.pages?.length === 0) {
       return <p>Loading...</p>;
     } else {
       return (
+<<<<<<< HEAD
 
           <img
             className="imagePage"
             src={chapterStore?.chapter?.pages?.[current]}
             alt="Comic Page"/>
+=======
+        <img
+          className="imagePage"
+          src={chapterStore?.chapter?.pages?.[current]}
+          alt="Comic Page"
+        />
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
       );
     }
   };
 
+<<<<<<< HEAD
  const pageActual = () => {
   const currenActual = current
   let page =  localStorage.setItem("page", JSON.stringify(currenActual));
@@ -55,14 +82,34 @@ const traerPageActual = () =>{
  }
  traerPageActual()
 
+=======
+  const pageActual = () => {
+    const currenActual = current;
+    let page = localStorage.setItem("page", JSON.stringify(currenActual));
+    return page;
+  };
+  pageActual();
+
+  const traerPageActual = () => {
+    let lastPageRead = JSON.parse(localStorage.getItem("page"));
+
+    return lastPageRead;
+  };
+  traerPageActual();
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
 
   const next = () => {
     console.log(chapterStore);
     if (current >= chapterStore.chapter?.pages?.length - 1) {
       console.log("end chapter");
 
+<<<<<<< HEAD
       const nextchaptes = chapterStore.chapters.response.find(
         (chapter) => chapterStore.chapter?.order + 1 === chapter.order
+=======
+      const nextchaptes = chapterStore?.chapters.response.find(
+        (chapter) => chapterStore?.chapter?.order + 1 === chapter.order
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
       );
 
       navigation(`/pages/${nextchaptes._id}`);
@@ -70,6 +117,7 @@ const traerPageActual = () =>{
     }
     if (current !== chapterStore.chapter.pages?.length - 1) {
       setCurrent(current + 1);
+<<<<<<< HEAD
       console.log(current)
     }
 
@@ -84,13 +132,31 @@ const traerPageActual = () =>{
       navigation(`/comic/${chapterStore.chapter.comic_id}`);
     }
     else if (current === 0) {
+=======
+      console.log(current);
+    }
+  };
+
+  const prev = () => {
+    if (current > 0) {
+      setCurrent(current - 1);
+      console.log(current);
+    } else if (chapterStore.chapter?.order === 1) {
+      navigation(`/comic/${chapterStore.chapter.comic_id}`);
+    } else if (current === 0) {
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
       const prevchaptes = chapterStore.chapters.response.find(
         (chapter) => chapterStore.chapter?.order - 1 === chapter.order
       );
       navigation(`/pages/${prevchaptes._id}`);
       setCurrent(prevchaptes.pages?.length - 1);
+<<<<<<< HEAD
   }
   }
+=======
+    }
+  };
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
 
   const getChapterTitle = () => {
     if (chapterStore?.chapter?.length === 0) {
@@ -109,11 +175,22 @@ const traerPageActual = () =>{
       <Navbar />
       <div className="header"> </div>
       <div className="container">
+<<<<<<< HEAD
         
         <div className="titleContainer">{getChapterTitle()}</div>
         <Anchor className="back" to={`/comic/${chapterStore.chapter?.comic_id}`}>
           <img className="imgBack" src="/assets/back.png" alt="" /> Back to Chapters
         </Anchor> 
+=======
+        <div className="titleContainer">{getChapterTitle()}</div>
+        <Anchor
+          className="back"
+          to={`/comic/${chapterStore.chapter?.comic_id}`}
+        >
+          <img className="imgBack" src="/assets/back.png" alt="" /> Back to
+          Chapters
+        </Anchor>
+>>>>>>> 55f0a3d1c40640fab9fb305177103937a9bebb6e
         <div className="comicPage">
           {getPagesImages()}
           <div className="leftButton" onClick={prev}></div>
