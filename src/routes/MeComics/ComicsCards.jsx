@@ -57,8 +57,6 @@ const ComicsCards = () => {
 
   const  {myComics}  = useSelector((store) => store.myComic);
 
-  console.log(myComics); 
-
   return (
     <>
       {myComics?.map((card, index) => {

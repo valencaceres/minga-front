@@ -11,7 +11,6 @@ export default function CategoryButton(props) {
     if (category?.length > 0){
         category = category?.split(",")
         category = category?.includes(id)
-        console.log(category)
     } else {
         category = false
     }

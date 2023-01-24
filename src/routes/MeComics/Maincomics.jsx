@@ -19,10 +19,7 @@ const Maincomics = () => {
 
   const myComics = useSelector((store) => store.auth.mail);
 
-  console.log(myComics);
-
   const comicStore = useSelector((store) => store.comics.comics);
-  console.log(comicStore);
   const text = useSelector((store) => store.comics.text);
   useSelector((store) => store.comics);
   const inputCategory = useSelector(
@@ -34,7 +31,6 @@ const Maincomics = () => {
   const inputText = useRef(text);
 
   const lengthOfComics = comicStore;
-  console.log(lengthOfComics);
 
   const [pages, setPages] = useState(1);
   const next = () => {
