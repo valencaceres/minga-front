@@ -1,9 +1,9 @@
 import React from 'react'
 import Navbar from '../../layouts/navbar/NavBar'
 import './profile.css'
-import updateActions from '../../store/authorOrCompany/actions'
 import Form from '../../components/updateForm/Form'
 import { useSelector } from 'react-redux'
+import Alerts from '../../components/alerts/Alerts'
 
 export default function Profile() {
   const {is_author, is_company} = useSelector((store) => store.auth)
@@ -31,6 +31,7 @@ export default function Profile() {
                   <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="profileImg"  className='profileImage'/>
               </div>
             <Form data={data} name={name}/>
+            <Alerts/>
         </div>
         :
           <div>

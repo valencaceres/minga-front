@@ -3,10 +3,12 @@ import { useRef} from 'react'
 import '../../routes/Profile/profile.css'
 import updateActions from '../../store/authorOrCompany/actions'
 import { useSelector, useDispatch } from 'react-redux'
-import Swal from 'sweetalert2'
-
+import alertActions from '../../store/alert/actions'
 import { useState } from 'react'
 import ModalConfirmation from './Modal-confirmation'
+
+
+const {mingaAlert} = alertActions
 const {update} = updateActions
 
 export default function Form(props) {
@@ -22,31 +24,23 @@ export default function Form(props) {
     const closeModal = () => {
       setIsModalOpen(false);
     };
-
-
     const saveData = async(e) => {
         e.preventDefault()
         let form = {}
         Array.from(dataForm.current).forEach((element) => element.name && element.value && (form[element.name] = element.value))
         let response = await dispatch(update({data:form, token, name}))
-        console.log(response);
-        let [message] = response.payload.response
-        if(response.payload.response.data.success){
-          Swal.fire(
-            'Successful',
-            'Your data has been updated',
-            'success'
-          )
-        }
-        
-        if(response.payload.success === false){
-          Swal.fire({
-            icon: 'error',
-            title: 'Sorry...',
-            text: `${message?.message}`,
+/*         console.log(response.payload.success); */
+        console.log(response.payload.response.data)
+        if(response.payload.response.data?.success){
+          let messages = response.payload.response.data.message
+          dispatch(mingaAlert({messages, success:true}))
 
-          })
         }
+        if(!response.payload.success){
+          let messages = (typeof response.payload.response === "string") ? response.payload.response : response.payload.response?.map(element => element.message)
+          dispatch(mingaAlert({messages, success:false}))
+        }
+
 
       }
 
