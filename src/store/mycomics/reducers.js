@@ -1,25 +1,41 @@
 import { createReducer } from "@reduxjs/toolkit";
 import myComicsAction from "./actions";
 
-const { getMycomics } = myComicsAction
-const initialState = { myComics: [] ,  message: ""};
+const { getMycomics/* , deleteMycomics */, editMycomics } = myComicsAction;
+const initialState = { myComics: [], message: "", category: [] };
 
-const myComicReducer = createReducer(initialState, (builder) =>  {
-    builder
+const myComicReducer = createReducer(initialState, (builder) => {
+  builder
     .addCase(getMycomics.fulfilled, (state, action) => {
-        console.log(action.payload);
-        let newState = {
-            myComics: action.payload.response.comics.response,
-            message: action.payload.message            
-        }
-        return newState
+      let newState = {
+        myComics: action.payload.response.comics.response,
+        message: action.payload.message,
+      };
+      return newState;
     })
     .addCase(getMycomics.rejected, (state, action) => {
-        let newState =  {
-            message: "ERROR"
+      let newState = {
+        message: "ERROR",
+      };
+      return newState;
+    })
+     .addCase(editMycomics.fulfilled, (state, action) => {
+        let newState = {
+            comic: state.comic,
+            comics: action.payload.response.comics,
+            message: action.payload.message,
         }
         return newState
     })
-})
+    /*     .addCase(deleteMycomics.fulfilled, (state, action) => {
+      let newState = {
+        comic: state.comic,
+        comics: action.payload.response.comics,
+        message: action.payload.message,
+      };
+      return newState;
+  
+    }); */ 
+});
 
-export default myComicReducer
+export default myComicReducer;
