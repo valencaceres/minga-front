@@ -3,12 +3,11 @@ import { useRef} from 'react'
 import '../../routes/Profile/profile.css'
 import updateActions from '../../store/authorOrCompany/actions'
 import { useSelector, useDispatch } from 'react-redux'
-import alertActions from '../../store/alert/actions'
+import Swal from 'sweetalert2'
 
 import { useState } from 'react'
 import ModalConfirmation from './Modal-confirmation'
 const {update} = updateActions
-const {mingaAlert} = alertActions
 
 export default function Form(props) {
     let {data, name} = props
@@ -31,17 +30,29 @@ export default function Form(props) {
         Array.from(dataForm.current).forEach((element) => element.name && element.value && (form[element.name] = element.value))
         let response = await dispatch(update({data:form, token, name}))
         console.log(response);
-        if(response.payload.response.data?.message){
-            dispatch(mingaAlert(response.payload.response.data.message))
+        let [message] = response.payload.response
+        if(response.payload.response.data.success){
+          Swal.fire(
+            'Successful',
+            'Your data has been updated',
+            'success'
+          )
         }
-        if(!response.payload.success){
-            dispatch(mingaAlert(response.payload.response))
+        
+        if(response.payload.success === false){
+          Swal.fire({
+            icon: 'error',
+            title: 'Sorry...',
+            text: `${message?.message}`,
+
+          })
         }
 
       }
 
 
   return (
+    <>
     <form className='formProfile' ref={dataForm} onSubmit={saveData}>
         {data.map(element => {
             if(element === "date") {
@@ -51,8 +62,9 @@ export default function Form(props) {
             }
     })}
         <input type="submit" value="Save" className='inputSend' />
-        <button className='deleteButton' onClick={openModal}>Delete</button> 
         <ModalConfirmation isOpen={isModalOpen} name={name}/>
     </form>
+    <button className='deleteButton' onClick={openModal}>Delete</button> 
+    </>
   )
 }
