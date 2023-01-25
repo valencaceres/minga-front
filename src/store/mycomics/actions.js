@@ -17,11 +17,11 @@ let getMycomics = createAsyncThunk("getMycomics", async ({token}) => {
 });
 
 let editMycomics = createAsyncThunk(
-  "editMycomics", async ({token}) => {
+  "editMycomics", async ({datos,token}) => {
   try {
     let url = `http://localhost:8000/api/comics/me/`;
     let headers = {headers:{Authorization: `Bearer ${token}`,},};
-    const response = await axios.put(url, headers);
+    const response = await axios.put(url,datos,headers);
     return {
       response: { comics: response.data },
       message: "Comic found"
@@ -31,7 +31,6 @@ let editMycomics = createAsyncThunk(
       response: {comics: error.response.data},
       message: "Comic not found"
   }
-    
   }
 });
 
