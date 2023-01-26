@@ -19,13 +19,15 @@ const myComicReducer = createReducer(initialState, (builder) => {
       };
       return newState;
     })
-     .addCase(editMycomics.fulfilled, (state, action) => {
+    .addCase(editMycomics.fulfilled, (state, action) => {
+      
         let newState = {
             comic: state.comic,
-            comics: action.payload.response.comics,
+            comics: action.payload.response,
             message: action.payload.message,
         }
-        return newState
+        
+        return console.log(newState.comics)
     })
     /*     .addCase(deleteMycomics.fulfilled, (state, action) => {
       let newState = {

@@ -6,7 +6,7 @@ import myComicsAction from "../../store/mycomics/actions";
 import Swal from "sweetalert2";
 import axios from "axios";
 
-const ComicsCards = ({data}) => {
+const ComicsCards = ({data , reload , setReload}) => {
   const { getMycomics /* , deleteMycomics */, editMycomics } = myComicsAction;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -64,6 +64,7 @@ const ComicsCards = ({data}) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   const dispatch = useDispatch();
 
   return (
@@ -73,12 +74,13 @@ const ComicsCards = ({data}) => {
             <div className="rectangle"></div>
             <div className="textCard">
               <h2 className="tittleCard">{data.title}</h2>
-              <p className="categoryText">{data.category}</p>
+              <p className="categoryText"></p>
               <div>
                 <button className="butonEdit" onClick={openModal}>
                   Edit
                 </button>
-                {isModalOpen &&<Modal  data={data} isOpen={isModalOpen} onClose={closeModal} />}
+    
+                {isModalOpen &&<Modal setIsModalOpen={setIsModalOpen}  reload={reload} setReload={setReload} data={data} isOpen={isModalOpen} onClose={closeModal} />}
                 <button
                   className="butonDelete"
                   value={data._id}

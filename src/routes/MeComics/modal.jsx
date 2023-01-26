@@ -1,33 +1,50 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./modal.css";
-import { useDispatch } from "react-redux";
-import Swal from "sweetalert2";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import myComicsAction from '../../store/mycomics/actions'
+import myComicsAction from "../../store/mycomics/actions";
+import filterCategoryComicsActions from "../../store/comicCategories/actions";
+import Swal from "sweetalert2";
 
-const Modal = ({ isOpen, onClose, data }) => {
-  const {editMycomics} = myComicsAction
+const Modal = ({
+  isOpen,
+  onClose,
+  data,
+  reload,
+  setReload,
+  setIsModalOpen,
+}) => {
+  const { editMycomics, getMycomics } = myComicsAction;
+  /*   const { filterCategoryComics = filterCategoryComicsActions
+  const { categories } = useSelector((store) => store); */
+
   const token = localStorage.getItem("token");
-  const dataForm = useRef()
-  const editSucces = () => {
+  const dataForm = useRef();
+  const dispatch = useDispatch();
+  const [categories, setCategories] = useState([]);
+
+  const deleted = () => {
     Swal.fire({
       position: "top-center",
       icon: "success",
-      title: "Your work has been saved",
+      title: "Your Comics has been saved",
       showConfirmButton: false,
       timer: 1500,
     });
   };
-  const dispatch = useDispatch();
 
-/*   const data = () => {
+  /*  useEffect( () => {
+  getData()
+},[])  
+ */
+  /*  const data = () => {
     const inputTitle = useRef("");
     const inputPhoto = useRef("");
     const inputDescription = useRef("");
     const inputCategory = useRef("");
     return ()
   } */
-/*   const inputTitle = useRef("");
+  /*   const inputTitle = useRef("");
   const inputPhoto = useRef("");
   const inputDescription = useRef("");
   const inputCategory = useRef("");
@@ -36,33 +53,30 @@ const Modal = ({ isOpen, onClose, data }) => {
     return null;
   }
 
-  const saveData = (e) => {
-    e.preventDefault()
-    let form = {}
-    Array.from(dataForm.current).forEach((element) => element.value && (form = element.value))
-    let response = dispatch(editMycomics({data: form, token}))
-    console.log(response)
-  }
+  const saveData = async (e) => {
+    e.preventDefault();
+    let form = {};
+    Array.from(dataForm.current).forEach(
+      (element) =>
+        element.name && element.value && (form[element.name] = element.value)
+    );
+    console.log(form);
+    let response = await dispatch(
+      editMycomics({ data: form, id: data._id, token })
+    );
+    deleted();
+    setReload(!reload);
+    setIsModalOpen(false);
+  };
 
-/*  const [categories, setCategories] = useState([])
-
-  const getData = async()=>{
-      try {
-          const response = await axios.get("http://localhost:8000/api/categories")
-          setCategories(response.data.response)
-          
-      } catch(err){
-          console.log(err)
-      }
-  } 
-
-useEffect( () => {
-      getData()
-      
-  },[]) 
- */
-
-
+  const getData = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/api/categories");
+      setCategories(response.data.response);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="modal-overlay">
@@ -72,42 +86,61 @@ useEffect( () => {
           {console.log(data)}
           <label className="labelform" htmlFor="title">
             <input
+              name="title"
               defaultValue={data.title}
               className="inputt"
               type="text"
               id="title"
               placeholder="insert title"
-                          />
+            />
           </label>
           <label className="labelform" htmlFor="photo">
             <input
+              name="photo"
               defaultValue={data.photo}
               className="inputt"
               type="url"
               id="photo"
               placeholder="insert photo"
-                          />
+            />
           </label>
           <label className="labelform" htmlFor="description">
             <input
+              name="description"
               defaultValue={data.description}
               className="inputt"
               type="text"
               id="description"
               placeholder="insert description"
-                          />
+            />
           </label>
-          <label className="labelform" htmlFor="category">
-            <input
+          {/* <label className="labelform" htmlFor="category">
+              <input
+              name='category'
               defaultValue={data.category}
               className="inputt"
               type="text"
               id="category"
               placeholder="insert category"
-                          />
-          </label>
+                          />  */}
+
+          {/*   {console.log(categories)}
+            <select>
+              {categories?.map((category, index) => (
+                <option
+                  index={index}
+                  key={index}
+                  id={category._id}
+                  name={category.name}
+                >
+                  {category.name}
+                </option>
+              ))}
+              {console.log(categories)}
+            </select>
+       */}
           <input
-            onClick={editSucces}
+            onClick={saveData}
             className="ssubmit"
             type="submit"
             value="Edit"
