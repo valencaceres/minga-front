@@ -9,9 +9,10 @@
     align-items: center;
     justify-content: center;
   }
-  .select{
+  .selsects, .opt{
+
 color:black;
-width: 50vw
+width: 25vw
   }
   .modal-content {
     background-color: white;

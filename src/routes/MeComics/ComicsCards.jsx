@@ -6,14 +6,17 @@ import myComicsAction from "../../store/mycomics/actions";
 import Swal from "sweetalert2";
 import axios from "axios";
 
+
+
 const ComicsCards = ({data , reload , setReload}) => {
   const { getMycomics /* , deleteMycomics */, editMycomics } = myComicsAction;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const token = localStorage.getItem("token");
 
-  const { myComics } = useSelector((store) => store.myComic);
-/*   console.log(myComics); */
+  const myComics  = useSelector((store) => store);
+  console.log(myComics);
+  
 
   const deleted = () => {
     Swal.fire({
@@ -74,7 +77,7 @@ const ComicsCards = ({data , reload , setReload}) => {
             <div className="rectangle"></div>
             <div className="textCard">
               <h2 className="tittleCard">{data.title}</h2>
-              <p className="categoryText"></p>
+              <p className="categoryText">{data.category.name}</p>
               <div>
                 <button className="butonEdit" onClick={openModal}>
                   Edit

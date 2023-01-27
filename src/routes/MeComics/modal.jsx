@@ -33,10 +33,10 @@ const Modal = ({
     });
   };
 
-  /*  useEffect( () => {
-  getData()
-},[])  
- */
+  useEffect(() => {
+    getData();
+  }, []);
+
   /*  const data = () => {
     const inputTitle = useRef("");
     const inputPhoto = useRef("");
@@ -114,31 +114,27 @@ const Modal = ({
               placeholder="insert description"
             />
           </label>
-          {/* <label className="labelform" htmlFor="category">
-              <input
-              name='category'
-              defaultValue={data.category}
-              className="inputt"
-              type="text"
-              id="category"
-              placeholder="insert category"
-                          />  */}
+          <select className="selsects" name="category" > 
+            {categories?.map((category, index) => ( 
+              <option className="opt"
+                defaultValue={data.category.name}
+                key={index}
+                value={category._id}
+                id={category.name}>
+                {category.name}
+              </option>
+              
+            ))}
+             <option className="opt"
+                defaultValue={data.category.name}
+                key={data.index}
+                value={data.category._id}
+                id={data.category.name}>
+                {data.category.name}
+              </option>
+            {console.log(data.category.name)}
+          </select>
 
-          {/*   {console.log(categories)}
-            <select>
-              {categories?.map((category, index) => (
-                <option
-                  index={index}
-                  key={index}
-                  id={category._id}
-                  name={category.name}
-                >
-                  {category.name}
-                </option>
-              ))}
-              {console.log(categories)}
-            </select>
-       */}
           <input
             onClick={saveData}
             className="ssubmit"
