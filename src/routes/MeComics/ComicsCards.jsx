@@ -78,7 +78,7 @@ const ComicsCards = ({data , reload , setReload}) => {
             <div className="textCard">
               <h2 className="tittleCard">{data.title}</h2>
               <p className="categoryText">{data.category.name}</p>
-              <div>
+              <div className="buttoncards">
                 <button className="butonEdit" onClick={openModal}>
                   Edit
                 </button>
