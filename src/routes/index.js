@@ -13,6 +13,7 @@ import Comic from "./Comic/Comic.jsx";
 import Pages from "./pages/Pages.jsx";
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
+import Profile from "./Profile/Profile.jsx";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -69,6 +70,10 @@ export const indexRouter = createBrowserRouter([
     {
       path:"/signup",
       element:<SignUp/>
+    },
+    {
+      path:"/edit-profile",
+      element:<Profile/>
     }
 
   ])
