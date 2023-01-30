@@ -43,7 +43,7 @@ const EditChaptersForm =() => {
       
     }; 
     await dispatch(updateChapter(chapter));
-    await dispatch(getChapterDetails(chapter._id))
+    
   }; 
   const deleteChap = async (e) => {
     e.preventDefault();
