@@ -22,10 +22,6 @@ export default function Alerts() {
         `${success ? "success" : "error"}`
       )
 
-    if(view){
-      dispatch(mingaAlertFalse({view: false}))
-    }
-
 
 
     }

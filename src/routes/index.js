@@ -11,6 +11,9 @@ import Comics from "./Comics/Comics.jsx";
 import NewCompany from "./newCompany/NewCompany.jsx";
 import Comic from "./Comic/Comic.jsx";
 import Pages from "./pages/Pages.jsx";
+import MeComics from "./MeComics/MeComics";
+
+
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
 import Profile from "./Profile/Profile.jsx";
@@ -63,6 +66,11 @@ export const indexRouter = createBrowserRouter([
         path: "/comics",
         element: <Comics />,
     },
+    {
+      path: "/comics/me",
+      element: <MeComics/>
+    }
+
     ,{
       path:"/signin",
       element:<SignIn/>
