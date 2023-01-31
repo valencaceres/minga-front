@@ -14,6 +14,7 @@ import Pages from "./pages/Pages.jsx";
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
 import Profile from "./Profile/Profile.jsx";
+import SuccessPayment from "./success-payment/Success-payment.jsx";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ export const indexRouter = createBrowserRouter([
     {
       path:"/edit-profile",
       element:<Profile/>
+    },
+    {
+      path:"/success-payment",
+      element:<SuccessPayment/>
     }
 
   ])
