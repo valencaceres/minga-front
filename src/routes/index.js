@@ -14,6 +14,7 @@ import Pages from "./pages/Pages.jsx";
 import MeComics from "./MeComics/MeComics";
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
+import EditChapterRoute from "./EditChapter/EditChapterRoute.jsx"
 import Profile from "./Profile/Profile.jsx";
 
 export const indexRouter = createBrowserRouter([
@@ -76,6 +77,10 @@ export const indexRouter = createBrowserRouter([
     {
       path:"/signup",
       element:<SignUp/>
+    },
+    {
+      path: "/edit-chapter",
+      element: <EditChapterRoute />,
     },
     {
       path:"/edit-profile",

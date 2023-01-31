@@ -7,6 +7,9 @@ import chapterReducer from "./chapter/reducers.js";
 import pages   from "./chapter/reducers.js";
 import comicComp from "./ComicsFromCompany/reducers.js";
 import comicsFromCategoryReducer from './ComicsFromCategories/reducers.js'
+import allcomicsreducer from "./getAllComics/reducer.getAllComics.js";
+import chapterFromComicReducer from "./ChaptersFromComic/reducer.ChaptersFromComics.js";
+import getIdReducer from "./getIdAction/getIdReducer.js"
 import authReducer from './auth/reducers';
 import myComicReducer from "./mycomics/reducers.js";
 import category from './mycomics/reducers.js'
@@ -23,6 +26,10 @@ const store = configureStore({
         filterCategoryComic: filterCategoryReducer,
         comicComp,
         comicsFromCategoryReducer,
+        allComics : allcomicsreducer ,
+        chapterFromComicReducer,
+        id: getIdReducer, 
+        auth: authReducer,
         auth: authReducer,
         myComic: myComicReducer,
         category,
@@ -31,8 +38,4 @@ const store = configureStore({
     }
   })
 
-
-
-
-
-export default store
+  export default store

@@ -79,7 +79,7 @@ const ComicsCards = ({data , reload , setReload}) => {
             <div className="rectangle"></div>
             <div className="textCard">
               <h2 className="tittleCard">{data.title}</h2>
-              <p className="categoryText">{data.category.name}</p>
+              {/* <p className="categoryText">{data.category.name}</p> */}
               <div className="buttoncards">
                 <button className="butonEdit" onClick={openModal}>
                   Edit
