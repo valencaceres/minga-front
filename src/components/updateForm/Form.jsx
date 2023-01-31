@@ -7,7 +7,6 @@ import alertActions from '../../store/alert/actions'
 import { useState } from 'react'
 import ModalConfirmation from './Modal-confirmation'
 
-
 const {mingaAlert} = alertActions
 const {update} = updateActions
 
@@ -39,7 +38,6 @@ export default function Form(props) {
           let messages = (typeof response.payload.response === "string") ? response.payload.response : response.payload.response?.map(element => element.message)
           dispatch(mingaAlert({messages, success:false}))
         }
-
       }
 
 

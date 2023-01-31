@@ -9,7 +9,6 @@ const initialState = {
     messages: "",
     success: ''
 }
-
 const alertReducer = createReducer(
     initialState, 
     (builder) => {

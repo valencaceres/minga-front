@@ -13,6 +13,7 @@ const ModalConfirmation = ({ isOpen, name }) => {
     return null;
   }
   const disableAccount = () => { 
+  const disableAccount = () => {
     dispatch(disable({token, name, active:false}))
   }
   return (
