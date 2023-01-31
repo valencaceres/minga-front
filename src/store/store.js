@@ -25,7 +25,7 @@ const store = configureStore({
         comicsFromCategoryReducer,
         auth: authReducer,
         myComic: myComicReducer,
-        category
+        category,
         data: updateReducer
 
     }
