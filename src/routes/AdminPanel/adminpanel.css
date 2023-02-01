@@ -64,9 +64,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.table{
+.table1{
+    border: 1px solid #EEEEF2;
+    background-color: #F9F9FC;
+    width: 100%;
     color: black;
 }
 
@@ -74,18 +78,81 @@ table , td, th {
 	border: 1px solid #000000;
 	border-collapse: collapse;
 }
-td, th {
-    color: black;
+td {
+    border: none;
+    color: #484964;
 	padding: 3px;
 	width: 30px;
 	height: 25px;
 }
 th {
-	background: #f0e6cc;
+	background: #F9F9FC;
 }
 .even {
-	background: #fbf8f0;
+	background: #F9F9FC;
 }
 .odd {
-	background: #fefcf9;
+	background: #F9F9FC;
+}
+.imglogocompani{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.butonCompany {
+    border: 1px solid #EEEEF2;
+    border-bottom: 1px solid #4338CA;
+    font-weight: bold;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 15px 0 0 0;
+
+}
+.butonAuthor{ 
+    border: 1px solid #EEEEF2;
+    border-bottom: 1px solid #4338CA;
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+    height: 50px;
+    border-radius: 0 15px 0 0;
+}
+.butonCompany:hover,.butonAuthor:hover{
+    filter: opacity(.5);
+}
+.trr{
+text-align: center;
+border: 1px solid #EEEEF2;
+
+}
+
+
+.divButton{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.rendeer{
+width: 600px;
+}
+.iconitoC{
+    width: 20px;
+    height: 20px;
+    margin: 0 6px ;
+}
+.iconitoA{
+    width: 10px;
+    height: 13px;
+    margin: 0 6px ;
+}
+.photoAutor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.tdLeft{
+    text-align: left;
 }
