@@ -10,6 +10,10 @@ import comicsFromCategoryReducer from './ComicsFromCategories/reducers.js'
 import authReducer from './auth/reducers';
 import myComicReducer from "./mycomics/reducers.js";
 import category from './mycomics/reducers.js'
+import adminReducerAll from "./admin/reducers.js";
+
+const {adminReducers, adminReducers2 } = adminReducerAll
+
 
 const store = configureStore({
   
@@ -24,7 +28,9 @@ const store = configureStore({
         comicsFromCategoryReducer,
         auth: authReducer,
         myComic: myComicReducer,
-        category
+        category,
+        adminAuthor: adminReducers,
+        adminCompany: adminReducers2
     }
   })
 
