@@ -57,10 +57,12 @@ export default function AdminPanel() {
 
   const updateAuthor = async (e) => {
     try {
-      setChange(!change)
       const data = {}
       const headers = { headers: { Authorization: `Bearer ${token}` } };
       await axios.put(`http://localhost:8000/api/auth/role/author/${e.target.value}`, data, headers,);
+      
+      setChange(!change)
+     
     } catch (error) {
       console.log(error);
     }
@@ -68,10 +70,12 @@ export default function AdminPanel() {
 
   const updateCompany = async (e) => {
     try {
-      setChange(!change)
       const data = {}
       const headers = { headers: { Authorization: `Bearer ${token}` } };
       await axios.put(`http://localhost:8000/api/auth/role/company/${e.target.value}`, data, headers);
+    
+      setChange(!change)
+      
     } catch (error) {
       console.log(error);
     }
@@ -136,7 +140,7 @@ export default function AdminPanel() {
                         </td>
                         <td>
                         <label className="switch">
-                            <input onChange={updateCompany} checked={card.active} value={card._id} type="checkbox" name="" id="" />
+                            <input className="cm-toggle" name="checkbox" onChange={updateCompany} checked={card.active} value={card._id} type="checkbox" id="" />
                           </label>
                         </td>
                       </tr>
@@ -160,8 +164,7 @@ export default function AdminPanel() {
                         </td>
                         <td>
                           <label className="switch" htmlFor="">
-                            <input onChange={updateAuthor} value={card._id} checked={card.active} type="checkbox" name="" id="" />
-                            <span className="slider"/>
+                            <input onChange={updateAuthor} value={card._id} checked={card.active} type="checkbox" className="cm-toggle" name="checkbox" id="" />
                           </label>
                         </td>
                       </tr>
