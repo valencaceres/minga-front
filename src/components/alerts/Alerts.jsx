@@ -23,11 +23,8 @@ export default function Alerts() {
     if(view){
       dispatch(mingaAlertFalse({view: false}))
     }
-
     }
-
   return (
-
     <div>
     </div>
 

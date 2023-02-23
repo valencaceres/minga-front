@@ -33,14 +33,11 @@ export default function Form(props) {
         if(response.payload.response.data?.success){
           let messages = response.payload.response.data.message
           dispatch(mingaAlert({messages, success:true}))
-
         }
         if(!response.payload.success){
           let messages = (typeof response.payload.response === "string") ? response.payload.response : response.payload.response?.map(element => element.message)
           dispatch(mingaAlert({messages, success:false}))
         }
-
-
       }
 
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./comicscards.css";
-
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "./modal";
 import myComicsAction from "../../store/mycomics/actions";
@@ -61,8 +60,6 @@ const ComicsCards = ({data , reload , setReload}) => {
   useEffect(() => {
     dispatch(getMycomics({ token }));
   }, []);
-
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -98,7 +95,6 @@ const ComicsCards = ({data , reload , setReload}) => {
               <img className="imagen-card" src={data.photo} alt="" />
             </div>
           </div>
-
     </>
   );
 };

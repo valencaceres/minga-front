@@ -84,7 +84,6 @@ color: #8883F0;
     font-size: 30px;
     margin: 10px 0;
     font-weight: lighter;
-
 }
 @media (max-width:588px){
     .card{
@@ -133,7 +132,6 @@ color: #8883F0;
     .butonDelete, .butonEdit{
         margin: 0 3px;
         padding: 0px;
-
 
         font-size: 15px;
         width: 10vw;
