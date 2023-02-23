@@ -94,13 +94,71 @@ const getChapterbyorderandcomic = createAsyncThunk(
         }
     }
 )
+const updateChapter = createAsyncThunk("updateChapter", async (chapter, {rejectWithValue}) => {
+    console.log(chapter)
+    const token = localStorage.getItem("token")
+    const { _id } = chapter
+    delete chapter._id
+    let headers = {headers: {'Authorization' :`Bearer ${token}`}}
+    console.log(chapter)
+    console.log (_id)
+    try {
+    
+        const res = await axios.put(
+            `http://localhost:8000/api/chapters/${_id}`,chapter,headers, //ruta , / segundo es el body lo que mando... 
+            
+        )
+        return {
+            success : true,
+            response:  res.data.response,
+            message: "Chapter editado",
+        }
+    } catch (error) {
+        return rejectWithValue({
+            success : false,
+            response:  error.response.data,
+            message: "Error edit chapter",
+        })
+    }
+})
+const deleteChapter = createAsyncThunk("deleteChapter", async (chapter, {rejectWithValue}) => {
+    // console.log(chapter)
+    const token = localStorage.getItem("token")
+    // const { _id } = chapter
+    // delete chapter._id
+    const id = chapter._id
+    console.log(id)
+    let headers = {headers: {'Authorization' :`Bearer ${token}`}}
+    // console.log(chapter)
+    console.log (id)
+    try {
+    
+        const res = await axios.delete(
+            `http://localhost:8000/api/chapters/${id}`,headers //ruta , / segundo es el body lo que mando... 
+            
+        )
+        return {
+            success : true,
+            response:  res.data.response,
+            message: "Chapter deleted",
+        }
+    } catch (error) {
+        return rejectWithValue({
+            success : false,
+            response:  error.response.data,
+            message: "Error delete chapter",
+        })
+    }
+})
 
 const chapterActions = {
     newChapter,
     getChapterDetails,
     getChapters,
     getChapterbyorderandcomic,
-    getChapter
+    getChapter,
+    updateChapter,
+    deleteChapter
 }
 
 export default chapterActions
