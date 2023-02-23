@@ -8,10 +8,12 @@ import pages   from "./chapter/reducers.js";
 import comicComp from "./ComicsFromCompany/reducers.js";
 import comicsFromCategoryReducer from './ComicsFromCategories/reducers.js'
 import authReducer from './auth/reducers';
-import updateReducer from "./authorOrCompany/reducers.js";
-import donationReducers from "./mercadopago/reducers.js";
 import myComicReducer from "./mycomics/reducers.js";
 import category from './mycomics/reducers.js'
+import adminReducerAll from "./admin/reducers.js";
+const {adminReducers, adminReducers2 } = adminReducerAll
+import updateReducer from "./authorOrCompany/reducers.js";
+import donationReducers from "./mercadopago/reducers.js";
 
 
 const store = configureStore({
@@ -26,10 +28,12 @@ const store = configureStore({
         comicComp,
         comicsFromCategoryReducer,
         auth: authReducer,
+        myComic: myComicReducer,
+        category,
+        adminAuthor: adminReducers,
+        adminCompany: adminReducers2
         data: updateReducer,
         donation: donationReducers
-        myComic: myComicReducer,
-        category
     }
   })
 

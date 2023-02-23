@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import alertActions from '../../store/alert/actions'
 const {mingaAlertFalse} = alertActions
 
+
 export default function Alerts() {
 /*     const store = useSelector(store =>  console.log(store)) */
     const dispatch = useDispatch()

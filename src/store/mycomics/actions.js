@@ -56,4 +56,3 @@ const myComicsAction = {
 };
 
 export default myComicsAction;
-

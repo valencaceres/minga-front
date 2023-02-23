@@ -12,6 +12,7 @@ import NewCompany from "./newCompany/NewCompany.jsx";
 import Comic from "./Comic/Comic.jsx";
 import Pages from "./pages/Pages.jsx";
 import MeComics from "./MeComics/MeComics";
+import AdminPanel from "./AdminPanel/AdminPanel.jsx";
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
 import Profile from "./Profile/Profile.jsx";
@@ -78,6 +79,10 @@ export const indexRouter = createBrowserRouter([
     {
       path:"/signup",
       element:<SignUp/>
+    },
+    {
+      path:"/admin",
+      element:<AdminPanel/>
     },
     {
       path:"/edit-profile",

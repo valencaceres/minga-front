@@ -1,0 +1,59 @@
+{
+    "Metal": [
+        {
+            "name": "Fear Of The Dark",
+            "photo": "https://m.media-amazon.com/images/I/71PJR7Md3aL._AC_UY741_.jpg",
+            "price": 65,
+            "stock": 9,
+            "demo": "https://www.youtube.com/watch?v=bePCRKGUwAY&ab_channel=IronMaiden-Topic",
+            "description": "Es el noveno álbum de estudio de la banda Iron Maiden. Salió a la venta el 11 de mayo de 1992 figurando como número 1 en el ranking británico.El álbum arrojó tres sencillos,'Be Quick or Be Dead' (lanzado el 13 de abril del mismo año, ubicándose en el número 1 del ranking), 'From Here to Eternity' (lanzado el 29 de junio, quedando en el puesto número 21) y 'Wasting Love' en el mes de septiembre.",
+            "artist": "Iron Maiden",
+            "date": "1992",
+            "sales": 7
+        },
+        {
+            "name": "Paranoid",
+            "photo": "https://townsquare.media/site/295/files/2015/09/maxresdefault.jpg?w=980&q=75",
+            "price": 95,
+            "stock": 5,
+            "demo": "https://www.youtube.com/watch?v=uk_wUT1CvWM&ab_channel=RocknRollVideos",
+            "description": "Es el segundo álbum de la banda británica de heavy metal Black Sabbath. Originariamente su nombre iba a ser War Pigs, pero debido a presiones de la discográfica se cambió el nombre a Paranoid. Fue grabado y publicado en el año 1970, constituyendo el primer éxito de la banda, y hasta nuestros días es considerado un disco de culto. El disco llegó a ser número uno en el Reino Unido, y hoy en día sigue siendo el LP más vendido de Black Sabbath",
+            "artist": "Black Sabbath",
+            "date": "1970",
+            "sales": 3 
+        },
+        {
+            "name": "Kill 'Em All",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKPmncdg7oWdjcejvYdr6b32jM5oYhvifqHFFxzfZJcD3_gyfrd4ssTSJ3fSpibGlisJc&usqp=CAU",
+            "price":  57,
+            "stock": 11,
+            "demo": "https://www.youtube.com/watch?v=FLTchCiC0T0&ab_channel=Metallica-Topic",
+            "description": "Es el álbum debut del grupo musical  estadounidense de metal Metallica, publicado el 25 de julio de 1983 por Megaforce Records. El grupo, fundado en 1981 por el baterista Lars Ulrich y el vocalista y guitarrista rítmico James Hetfield, comenzó sus actuaciones en algunos clubes de Los Ángeles y decidió grabar varias maquetas para llamar la atención de los propietarios de estos.",
+            "artist": "Metallica",
+            "date": "1983",
+            "sales": 2
+        },
+        {
+            "name": "Cowboys from Hell",
+            "photo": "https://www.ultimate-guitar.com/static/article/news/9/47369_0_wide_ver1518418672.jpg",
+            "price": "23",
+            "stock": 20,
+            "demo": "https://www.youtube.com/watch?v=WYfljBCpmE4&ab_channel=Pantera-Topic",
+            "description": "Cowboys from Hell es el quinto álbum de la banda norteamericana de groove metal Pantera. Fue editado y producido por Terry Date, y posteriormente publicado el 24 de julio de 1990. Es el primer álbum editado por la banda en el sello Atco Records, fue grabado en The Dallas Sound Lab en Irving, Texas",
+            "artist": "Pantera",
+            "date": "1990",
+            "sales": 2 
+        },
+        {
+            "name": "Rust in Peace",
+            "photo": "https://http2.mlstatic.com/D_NQ_NP_666227-MLA27690219539_072018-O.webp",
+            "price": 79,
+            "stock": 7,
+            "demo": "https://www.youtube.com/watch?v=J5o8Daw1ZsY&ab_channel=Megadeth-Topic",
+            "description": "es el cuarto álbum de estudio de la banda estadounidense de thrash metal Megadeth, publicado por la compañía discográfica Capitol Records el 24 de septiembre de 1990. Producido por Mike Clink y Dave Mustaine, Rust in Peace marcó el debut del guitarrista Marty Friedman y el batería Nick Menza, que reemplazaron respectivamente a Jeff Young y Chuck Behler en 1989. Dos sencillos fueron extraídos del álbum, «Hangar 18» y «Holy Wars... The Punishment Due», que son interpretados con regularidad en las actuaciones del grupo",
+            "artist": "Megadeth",
+            "date": "1990",
+            "sales": 8
+        }
+    ]
+}
