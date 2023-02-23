@@ -50,7 +50,6 @@ const [categories, setCategories] = useState([])
 
 
 console.log(myComics); 
-
   return (
     <main className="mainn">
       <div className="nav">

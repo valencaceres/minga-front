@@ -11,8 +11,9 @@ import authReducer from './auth/reducers';
 import myComicReducer from "./mycomics/reducers.js";
 import category from './mycomics/reducers.js'
 import adminReducerAll from "./admin/reducers.js";
-
 const {adminReducers, adminReducers2 } = adminReducerAll
+import updateReducer from "./authorOrCompany/reducers.js";
+import donationReducers from "./mercadopago/reducers.js";
 
 
 const store = configureStore({
@@ -24,13 +25,15 @@ const store = configureStore({
         pages,
         comics: comicsReducers,
         filterCategoryComic: filterCategoryReducer,
-        comicComp ,
+        comicComp,
         comicsFromCategoryReducer,
         auth: authReducer,
         myComic: myComicReducer,
         category,
         adminAuthor: adminReducers,
         adminCompany: adminReducers2
+        data: updateReducer,
+        donation: donationReducers
     }
   })
 

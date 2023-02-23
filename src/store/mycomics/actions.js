@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 let getMycomics = createAsyncThunk("getMycomics", async ({token}) => {
   try {
     let url = `http://localhost:8000/api/comics/me/`;

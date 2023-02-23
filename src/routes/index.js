@@ -13,10 +13,11 @@ import Comic from "./Comic/Comic.jsx";
 import Pages from "./pages/Pages.jsx";
 import MeComics from "./MeComics/MeComics";
 import AdminPanel from "./AdminPanel/AdminPanel.jsx";
-
-
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
+import Profile from "./Profile/Profile.jsx";
+import SuccessPayment from "./success-payment/Success-payment.jsx";
+
 
 export const indexRouter = createBrowserRouter([
     {
@@ -82,6 +83,14 @@ export const indexRouter = createBrowserRouter([
     {
       path:"/admin",
       element:<AdminPanel/>
+    },
+    {
+      path:"/edit-profile",
+      element:<Profile/>i
+    },
+    {
+      path:"/success-payment",
+      element:<SuccessPayment/>
     }
 
   ])

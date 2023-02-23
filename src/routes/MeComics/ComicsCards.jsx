@@ -60,7 +60,6 @@ const ComicsCards = ({data , reload , setReload}) => {
   useEffect(() => {
     dispatch(getMycomics({ token }));
   }, []);
-
   const openModal = () => {
     setIsModalOpen(true);
   };
