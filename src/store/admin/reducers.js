@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import adminActions from "./actions";
 
-const { getActiveAuthors,getActiveCompanies,UpdateUserToCompany,UpdateUserToAuthor,} = adminActions
+const { getActiveAuthors,getActiveCompanies} = adminActions
 
 const initialState = {authors: [],  message: ""}
 const initialState2 = { companies: [],message: "" }

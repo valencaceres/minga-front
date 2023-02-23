@@ -5,7 +5,7 @@ const getActiveAuthors = createAsyncThunk("getAuthor", async (token) => {
   try {
     let headers = { headers: { Authorization: `Bearer ${token}` } };
     const response = await axios.get(
-      `http://localhost:8000/api/authors?active=`,
+      `http://localhost:8000/api/authors?`,
       headers
     );
     return {

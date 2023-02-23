@@ -3,46 +3,24 @@ import "./adminpanel.css";
 import NavBar from "../../layouts/navbar/NavBar";
 import { useDispatch, useSelector } from "react-redux";
 import adminActions from "../../store/admin/actions";
-/* import { useParams } from "react-router-dom"; */
 import axios from "axios";
 
 export default function AdminPanel() {
   const [rendertable, setRendertable] = useState(true);
   const [ change, setChange ] = useState(false);
-  /* const [switcher, setSwitcher] = useState({checked: true}) */
-  const [color, setColor] = useState({
-    backgroundColor: "#4338CA",
-    color: "#F9F9FC",
-  });
-  const [color2, setColor2] = useState({
-    backgroundColor: "#F9F9FC",
-    color: "#4338CA",
-  });
-
-  const dispatch = useDispatch();
-  /* const { id } = useParams(); */
-  const {
-    getActiveAuthors,
-    getActiveCompanies,
-    /* UpdateUserToCompany,
-    UpdateUserToAuthor, */
-  } = adminActions;
-
+  const [color, setColor] = useState({backgroundColor: "#4338CA",color: "#F9F9FC",});
+  const [color2, setColor2] = useState({backgroundColor: "#F9F9FC",color: "#4338CA",});
   const token = localStorage.getItem("token");
+  const dispatch = useDispatch();
+  const {getActiveAuthors,getActiveCompanies,} = adminActions;
+
   useEffect(() => {
     dispatch(getActiveCompanies(token));
     dispatch(getActiveAuthors(token));
   }, [change]);
 
-  const adminAuthorStore = useSelector(
-    (state) => state.adminAuthor.authors.response
-  );
-  console.log(adminAuthorStore);
-  const adminCompanyStore = useSelector(
-    (state) => state.adminCompany.companies.response
-  );
-  console.log(adminCompanyStore);
-
+  const adminAuthorStore = useSelector((state) => state.adminAuthor.authors.response);
+  const adminCompanyStore = useSelector((state) => state.adminCompany.companies.response);
 
   const activeTable = (r) => {
     setRendertable(r);
