@@ -4,6 +4,7 @@ import "./newcomic.css";
 import axios from "axios";
 import  alertActions from '../../store/alert/actions.js'
 import { useDispatch } from 'react-redux'
+import Navbar from "../../layouts/navbar/NavBar";
 
 const NewComic = () => {
     const {mingaAlert} = alertActions
@@ -43,7 +44,9 @@ const NewComic = () => {
     };
 
     return (
-        <div className="chapters">
+        <>            
+        <Navbar/> 
+        <div className="chapters"> 
             <h2 className="legend">NEW COMIC</h2>
 
             <form className="form" onSubmit={storeData}>
@@ -111,6 +114,7 @@ const NewComic = () => {
                 <input className="submit" type="submit"value="Add new comic" />
             </form>
         </div>
+        </>
     );
 };
 

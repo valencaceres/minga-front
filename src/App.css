@@ -2,9 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
   color: #fff;
   text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
 }
 body {
   background-color: #ebebeb;
@@ -23,7 +23,7 @@ header {
 }
 
 
-span {
+.span {
   color: #fff;
   font-size: small;
   border: 1px solid #fff;
@@ -34,7 +34,7 @@ span {
   -ms-border-radius: 1.4rem;
   -o-border-radius: 1.4rem;
 }
-span > a {
+.span > a {
   font-weight: bold;
 }
 

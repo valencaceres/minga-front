@@ -67,9 +67,6 @@
     align-items: center;
     height: 25vh;
 }
-.sorry{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 @media (min-width: 320px) and (max-width: 768px){
     .chaptercontent{
         width: 80vw;

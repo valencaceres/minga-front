@@ -4,15 +4,13 @@ import "./editchapter.route.css"
 import EditChaptersForm from "../../components/EditChaptersForm/EditChaptersForm"
 
 
-const EditChapterRoute = () => {
+const EditChapter = () => {
     
 
     return (
         <>
-        <div className="container-nav-edit-chapter">
+
             <Navbar/>
-        </div>
-        
             <div>
                 <div className="container-form-editchapter">
                     <EditChaptersForm/>
@@ -23,4 +21,4 @@ const EditChapterRoute = () => {
 }
 
 
-export default EditChapterRoute
+export default EditChapter
