@@ -1,10 +1,12 @@
 import React from "react";
 import "./mycomics.css";
 import { Link as Anchor } from "react-router-dom";
+import Navbar from "../../layouts/navbar/NavBar";
 
 export default function MyComics() {
   return (
     <div>
+      <Navbar/>
       <div className="my-comics-container">
         <h1 className="title-my-comics">MyComics</h1>
       </div>

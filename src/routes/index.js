@@ -15,10 +15,10 @@ import MeComics from "./MeComics/MeComics";
 import AdminPanel from "./AdminPanel/AdminPanel.jsx";
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
-import EditChapterRoute from "./EditChapter/EditChapterRoute.jsx"
 import Profile from "./Profile/Profile.jsx";
 import Welcome from "../components/welcome/Welcome.js";
 import SuccessPayment from "./success-payment/Success-payment.jsx";
+import EditChapter from "./EditChapter/EditChapter.jsx";
 
 
 export const indexRouter = createBrowserRouter([
@@ -29,17 +29,20 @@ export const indexRouter = createBrowserRouter([
         {
           path: "/",
           element: <Carousel />
-        },{
-          path :"/my-comics",
-          element: <MyComics />
-        },{
-          path :"/new-comic",
-          element: <NewComic />
-        },{
-          path: "/comments",
-          element: <Comments />
         }
       ]
+    },
+    {
+      path :"/new-comic",
+      element: <NewComic />
+    },
+    {
+      path :"/my-comics",
+      element: <MyComics />
+    },
+    {
+      path: "/comments",
+      element: <Comments />
     },
     {
       path :"/new-author",
@@ -83,8 +86,8 @@ export const indexRouter = createBrowserRouter([
       element:<SignUp/>
     },
     {
-      path: "/edit-chapter",
-      element: <EditChapterRoute />,
+      path: "/edit-chapters",
+      element: <EditChapter/>,
     },
     {
       path:"/edit-profile",
@@ -93,13 +96,14 @@ export const indexRouter = createBrowserRouter([
     {
       path:"/verify/:verify_Code",
       element: <Welcome/> 
-    }
+    },
+    {
       path:"/admin",
       element:<AdminPanel/>
     },
     {
       path:"/edit-profile",
-      element:<Profile/>i
+      element:<Profile/>
     },
     {
       path:"/success-payment",

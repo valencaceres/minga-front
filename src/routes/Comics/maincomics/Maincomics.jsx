@@ -67,9 +67,7 @@ const Maincomics = () => {
 
     return (
         <main className="mainComics">
-            <div className="nav">
             <Navbar/>
-            </div>
             <div className="main-background">
                 <div className="section2">
                     <h1>COMICS</h1>
@@ -109,14 +107,14 @@ const Maincomics = () => {
                 </div>
                 <div className="container-button">
                     <div>
-                        {pages === 1 ? null : (
+                        {pages === 1 ? <div className="vacio"></div> : (
                             <button onClick={prev} className="botonnextprev">
                                 prev
                             </button>
                         )}
                     </div>
                     <div>
-                        {lengthOfComics?.length < 10 ? null : (
+                        {lengthOfComics?.length < 10 ? <div className="vacio"></div> : (
                             <button onClick={next} className="botonnextprev">
                                 next
                             </button>

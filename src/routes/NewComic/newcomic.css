@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 120vh;
+    justify-content: center;
 }
 input{
     margin: 15px 0 15px 0;

@@ -1,15 +1,12 @@
 import React from 'react';
-import Navcomics from "../../components/navcomics/Navcomics"
+import Navbar from '../../layouts/navbar/NavBar';
 import Maincomics from "./maincomics/Maincomics"
-import "./comics.css"
 
 
 function Comics() {
     return (
         <>
-        <div className='nav-container' >
-            
-        </div>    
+            <Navbar/>
             <Maincomics />
            
         </>
